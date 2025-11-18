@@ -3,9 +3,23 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Soham Pawar - AI & ML Engineer | AWS re/Start Program</title>
+    <title>Soham Pawar </title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
     <style>
+        /* === VARIABLES === */
+        :root {
+            --primary: #3498db;
+            --primary-dark: #2980b9;
+            --secondary: #2d3e50;
+            --accent: #FF9900;
+            --light: #f9f9f9;
+            --gray: #7f8c8d;
+            --dark: #333;
+            --shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+            --transition: all 0.3s ease;
+        }
+        
         /* === RESET & BASE STYLES === */
         * {
             margin: 0;
@@ -19,9 +33,10 @@
         }
         
         body {
-            background-color: #f9f9f9;
-            color: #333;
+            background-color: var(--light);
+            color: var(--dark);
             line-height: 1.6;
+            overflow-x: hidden;
         }
         
         a {
@@ -49,7 +64,7 @@
             font-weight: 700;
             text-align: center;
             margin-bottom: 3rem;
-            color: #2d3e50;
+            color: var(--secondary);
             position: relative;
         }
         
@@ -61,41 +76,69 @@
             transform: translateX(-50%);
             width: 80px;
             height: 4px;
-            background-color: #3498db;
+            background-color: var(--primary);
             border-radius: 2px;
         }
         
         .section-title span {
-            color: #3498db;
+            color: var(--primary);
         }
         
         .btn {
             display: inline-block;
             padding: 0.8rem 1.5rem;
-            background-color: #3498db;
+            background-color: var(--primary);
             color: white;
             border-radius: 5px;
             font-weight: 500;
-            transition: all 0.3s ease;
+            transition: var(--transition);
             border: none;
             cursor: pointer;
         }
         
         .btn:hover {
-            background-color: #2980b9;
+            background-color: var(--primary-dark);
             transform: translateY(-3px);
-            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+            box-shadow: var(--shadow);
         }
         
         .btn-outline {
             background-color: transparent;
-            color: #2d3e50;
-            border: 2px solid #3498db;
+            color: var(--secondary);
+            border: 2px solid var(--primary);
         }
         
         .btn-outline:hover {
-            background-color: #3498db;
+            background-color: var(--primary);
             color: white;
+        }
+        
+        .btn-accent {
+            background-color: var(--accent);
+        }
+        
+        .btn-accent:hover {
+            background-color: #e68900;
+        }
+        
+        /* === ANIMATIONS === */
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(20px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+        
+        @keyframes float {
+            0% { transform: translateY(0px); }
+            50% { transform: translateY(-10px); }
+            100% { transform: translateY(0px); }
+        }
+        
+        .animate {
+            animation: fadeIn 0.8s ease forwards;
+        }
+        
+        .float {
+            animation: float 5s ease-in-out infinite;
         }
         
         /* === HEADER === */
@@ -106,8 +149,8 @@
             width: 100%;
             background-color: rgba(255, 255, 255, 0.95);
             box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
-            z-index: 100;
-            transition: all 0.3s ease;
+            z-index: 1000;
+            transition: var(--transition);
         }
         
         .header.scrolled {
@@ -125,13 +168,13 @@
         .logo {
             font-size: 1.8rem;
             font-weight: 700;
-            color: #2d3e50;
+            color: var(--secondary);
             display: flex;
             align-items: center;
         }
         
         .logo span {
-            color: #3498db;
+            color: var(--primary);
         }
         
         .logo-aws {
@@ -151,11 +194,11 @@
         .nav-link {
             font-weight: 500;
             position: relative;
-            transition: color 0.3s ease;
+            transition: var(--transition);
         }
         
         .nav-link:hover {
-            color: #3498db;
+            color: var(--primary);
         }
         
         .nav-link::after {
@@ -165,8 +208,8 @@
             height: 3px;
             bottom: -5px;
             left: 0;
-            background-color: #3498db;
-            transition: width 0.3s ease;
+            background-color: var(--primary);
+            transition: var(--transition);
         }
         
         .nav-link:hover::after {
@@ -183,8 +226,8 @@
         .hamburger span {
             width: 25px;
             height: 3px;
-            background-color: #2d3e50;
-            transition: all 0.3s ease;
+            background-color: var(--secondary);
+            transition: var(--transition);
         }
         
         .hamburger.active span:nth-child(1) {
@@ -233,7 +276,7 @@
         
         .hero-greeting {
             font-size: 1.2rem;
-            color: #3498db;
+            color: var(--primary);
             font-weight: 500;
             margin-bottom: 0.5rem;
         }
@@ -241,7 +284,7 @@
         .hero-title {
             font-size: 3.5rem;
             font-weight: 700;
-            color: #2d3e50;
+            color: var(--secondary);
             margin-bottom: 1rem;
             line-height: 1.2;
         }
@@ -249,7 +292,7 @@
         .hero-subtitle {
             font-size: 1.5rem;
             font-weight: 500;
-            color: #7f8c8d;
+            color: var(--gray);
             margin-bottom: 2rem;
         }
         
@@ -275,11 +318,11 @@
             border-radius: 30px;
             overflow: hidden;
             transform: rotate(-5deg);
-            box-shadow: 0 20px 30px rgba(0, 0, 0, 0.1);
-            background-color: #3498db;
+            box-shadow: var(--shadow);
+            background-color: var(--primary);
             position: relative;
             margin: 0 auto;
-            transition: all 0.5s ease;
+            transition: var(--transition);
         }
         
         .hero-img-inner:hover {
@@ -292,20 +335,51 @@
             object-fit: cover;
         }
         
-        .aws-badge {
+        .floating-elements {
             position: absolute;
-            top: 20px;
-            right: 20px;
-            background: linear-gradient(135deg, #FF9900, #232F3E);
-            color: white;
-            padding: 8px 15px;
-            border-radius: 20px;
-            font-size: 0.9rem;
-            font-weight: 600;
-            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            pointer-events: none;
+        }
+        
+        .floating-element {
+            position: absolute;
+            background: rgba(255, 255, 255, 0.1);
+            border-radius: 10px;
+            box-shadow: 0 8px 32px rgba(31, 38, 135, 0.1);
+            backdrop-filter: blur(4px);
+            -webkit-backdrop-filter: blur(4px);
+            border: 1px solid rgba(255, 255, 255, 0.18);
             display: flex;
             align-items: center;
-            gap: 5px;
+            justify-content: center;
+            padding: 10px;
+        }
+        
+        .floating-element:nth-child(1) {
+            top: 10%;
+            left: 5%;
+            width: 60px;
+            height: 60px;
+            animation: float 6s ease-in-out infinite;
+        }
+        
+        .floating-element:nth-child(2) {
+            top: 60%;
+            right: 10%;
+            width: 50px;
+            height: 50px;
+            animation: float 7s ease-in-out infinite 1s;
+        }
+        
+        .floating-element:nth-child(3) {
+            bottom: 20%;
+            left: 15%;
+            width: 40px;
+            height: 40px;
+            animation: float 5s ease-in-out infinite 0.5s;
         }
         
         /* === ABOUT SECTION === */
@@ -323,9 +397,9 @@
             width: 100%;
             max-width: 400px;
             height: 450px;
-            background-color: #3498db;
+            background-color: var(--primary);
             border-radius: 20px;
-            box-shadow: 0 15px 25px rgba(0, 0, 0, 0.1);
+            box-shadow: var(--shadow);
             position: relative;
             overflow: hidden;
             margin: 0 auto;
@@ -345,7 +419,7 @@
             font-size: 2.5rem;
             font-weight: 700;
             margin-bottom: 1.5rem;
-            color: #2d3e50;
+            color: var(--secondary);
         }
         
         .about-desc {
@@ -369,11 +443,11 @@
         .info-title {
             font-weight: 600;
             margin-right: 0.5rem;
-            color: #2d3e50;
+            color: var(--secondary);
         }
         
         .info-value {
-            color: #7f8c8d;
+            color: var(--gray);
         }
         
         /* === SKILLS SECTION === */
@@ -394,8 +468,8 @@
             font-size: 1.5rem;
             font-weight: 600;
             margin-bottom: 1.5rem;
-            color: #2d3e50;
-            border-left: 4px solid #3498db;
+            color: var(--secondary);
+            border-left: 4px solid var(--primary);
             padding-left: 1rem;
         }
         
@@ -410,7 +484,7 @@
             padding: 1.2rem;
             border-radius: 10px;
             box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
-            transition: all 0.3s ease;
+            transition: var(--transition);
             text-align: center;
             position: relative;
             overflow: hidden;
@@ -428,7 +502,7 @@
             left: 0;
             width: 100%;
             height: 3px;
-            background-color: #3498db;
+            background-color: var(--primary);
             transform: scaleX(0);
             transition: transform 0.3s ease;
         }
@@ -439,11 +513,12 @@
         
         .skill-icon {
             font-size: 2.5rem;
-            color: #3498db;
+            color: var(--primary);
             margin-bottom: 0.5rem;
             display: flex;
             justify-content: center;
             align-items: center;
+            height: 60px;
         }
         
         .skill-icon img {
@@ -506,7 +581,7 @@
             display: flex;
             align-items: center;
             justify-content: center;
-            color: #FF9900;
+            color: var(--accent);
             font-size: 1.2rem;
         }
         
@@ -523,7 +598,7 @@
         .aws-logo {
             width: 300px;
             height: 300px;
-            background: linear-gradient(135deg, #FF9900, #232F3E);
+            background: linear-gradient(135deg, var(--accent), #232F3E);
             border-radius: 50%;
             display: flex;
             align-items: center;
@@ -548,13 +623,13 @@
             border-radius: 5px;
             font-size: 1.1rem;
             font-weight: 500;
-            color: #7f8c8d;
+            color: var(--gray);
             cursor: pointer;
-            transition: all 0.3s ease;
+            transition: var(--transition);
         }
         
         .tab-btn.active {
-            background-color: #3498db;
+            background-color: var(--primary);
             color: white;
         }
         
@@ -598,7 +673,7 @@
             width: 16px;
             height: 16px;
             border-radius: 50%;
-            background-color: #3498db;
+            background-color: var(--primary);
             left: -31px;
             top: 5px;
         }
@@ -606,7 +681,7 @@
         .timeline-date {
             font-size: 0.9rem;
             font-weight: 500;
-            color: #3498db;
+            color: var(--primary);
             margin-bottom: 0.5rem;
         }
         
@@ -614,13 +689,13 @@
             font-size: 1.3rem;
             font-weight: 600;
             margin-bottom: 0.5rem;
-            color: #2d3e50;
+            color: var(--secondary);
         }
         
         .timeline-company {
             font-size: 1.1rem;
             font-weight: 500;
-            color: #7f8c8d;
+            color: var(--gray);
             margin-bottom: 1rem;
         }
         
@@ -638,7 +713,7 @@
             content: '•';
             position: absolute;
             left: 0;
-            color: #3498db;
+            color: var(--primary);
             font-size: 1.5rem;
         }
         
@@ -658,7 +733,7 @@
             border-radius: 15px;
             overflow: hidden;
             box-shadow: 0 10px 20px rgba(0, 0, 0, 0.05);
-            transition: all 0.3s ease;
+            transition: var(--transition);
             position: relative;
         }
         
@@ -670,7 +745,6 @@
         .project-img {
             width: 100%;
             height: 200px;
-            background-color: #3498db;
             position: relative;
             overflow: hidden;
         }
@@ -688,6 +762,22 @@
             width: 80%;
         }
         
+        .project-img-1 {
+            background: linear-gradient(135deg, #3498db, #2980b9);
+        }
+        
+        .project-img-2 {
+            background: linear-gradient(135deg, #9b59b6, #8e44ad);
+        }
+        
+        .project-img-3 {
+            background: linear-gradient(135deg, #e74c3c, #c0392b);
+        }
+        
+        .project-img-4 {
+            background: linear-gradient(135deg, #2ecc71, #27ae60);
+        }
+        
         .project-content {
             padding: 1.5rem;
         }
@@ -696,7 +786,7 @@
             font-size: 1.3rem;
             font-weight: 600;
             margin-bottom: 1rem;
-            color: #2d3e50;
+            color: var(--secondary);
         }
         
         .project-desc {
@@ -714,7 +804,7 @@
         .project-tech-item {
             padding: 0.3rem 0.8rem;
             background-color: #e5f3fd;
-            color: #3498db;
+            color: var(--primary);
             border-radius: 20px;
             font-size: 0.9rem;
             font-weight: 500;
@@ -728,14 +818,14 @@
         .project-link {
             padding: 0.5rem 1rem;
             background-color: #f1f5f9;
-            color: #2d3e50;
+            color: var(--secondary);
             border-radius: 5px;
             font-weight: 500;
-            transition: all 0.3s ease;
+            transition: var(--transition);
         }
         
         .project-link:hover {
-            background-color: #3498db;
+            background-color: var(--primary);
             color: white;
         }
         
@@ -772,7 +862,7 @@
             width: 16px;
             height: 16px;
             border-radius: 50%;
-            background-color: #3498db;
+            background-color: var(--primary);
             left: -31px;
             top: 5px;
         }
@@ -780,7 +870,7 @@
         .education-date {
             font-size: 0.9rem;
             font-weight: 500;
-            color: #3498db;
+            color: var(--primary);
             margin-bottom: 0.5rem;
         }
         
@@ -788,13 +878,13 @@
             font-size: 1.3rem;
             font-weight: 600;
             margin-bottom: 0.5rem;
-            color: #2d3e50;
+            color: var(--secondary);
         }
         
         .education-school {
             font-size: 1.1rem;
             font-weight: 500;
-            color: #7f8c8d;
+            color: var(--gray);
             margin-bottom: 1rem;
         }
         
@@ -818,7 +908,7 @@
             padding: 2rem;
             border-radius: 15px;
             box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
-            transition: all 0.3s ease;
+            transition: var(--transition);
             position: relative;
             overflow: hidden;
         }
@@ -830,7 +920,7 @@
             left: 0;
             width: 5px;
             height: 100%;
-            background-color: #3498db;
+            background-color: var(--primary);
         }
         
         .certification-card:hover {
@@ -842,12 +932,12 @@
             font-size: 1.2rem;
             font-weight: 600;
             margin-bottom: 0.8rem;
-            color: #2d3e50;
+            color: var(--secondary);
         }
         
         .certification-issuer {
             font-size: 1rem;
-            color: #7f8c8d;
+            color: var(--gray);
             margin-bottom: 1rem;
             display: flex;
             align-items: center;
@@ -856,7 +946,7 @@
         
         .certification-date {
             font-size: 0.9rem;
-            color: #3498db;
+            color: var(--primary);
             font-weight: 500;
             margin-bottom: 1rem;
         }
@@ -878,7 +968,7 @@
             font-size: 2rem;
             font-weight: 700;
             margin-bottom: 1rem;
-            color: #2d3e50;
+            color: var(--secondary);
         }
         
         .contact-desc {
@@ -901,7 +991,7 @@
             align-items: center;
             justify-content: center;
             font-size: 1.5rem;
-            color: #3498db;
+            color: var(--primary);
         }
         
         .contact-text {
@@ -911,11 +1001,11 @@
         .contact-label {
             font-weight: 600;
             margin-bottom: 0.3rem;
-            color: #2d3e50;
+            color: var(--secondary);
         }
         
         .contact-value {
-            color: #7f8c8d;
+            color: var(--gray);
         }
         
         .contact-form {
@@ -933,7 +1023,7 @@
             display: block;
             margin-bottom: 0.8rem;
             font-weight: 500;
-            color: #2d3e50;
+            color: var(--secondary);
         }
         
         .form-control {
@@ -943,12 +1033,12 @@
             border-radius: 5px;
             font-size: 1rem;
             color: #555;
-            transition: all 0.3s ease;
+            transition: var(--transition);
         }
         
         .form-control:focus {
             outline: none;
-            border-color: #3498db;
+            border-color: var(--primary);
             box-shadow: 0 0 0 3px rgba(52, 152, 219, 0.1);
         }
         
@@ -961,22 +1051,22 @@
             width: 100%;
             padding: 1rem;
             border: none;
-            background-color: #3498db;
+            background-color: var(--primary);
             color: white;
             font-size: 1.1rem;
             font-weight: 500;
             border-radius: 5px;
             cursor: pointer;
-            transition: all 0.3s ease;
+            transition: var(--transition);
         }
         
         .form-btn:hover {
-            background-color: #2980b9;
+            background-color: var(--primary-dark);
         }
         
         /* === FOOTER === */
         .footer {
-            background-color: #2d3e50;
+            background-color: var(--secondary);
             padding: 4rem 0 2rem;
             color: white;
         }
@@ -995,7 +1085,7 @@
         }
         
         .footer-logo span {
-            color: #3498db;
+            color: var(--primary);
         }
         
         .footer-desc {
@@ -1017,11 +1107,11 @@
             align-items: center;
             justify-content: center;
             font-size: 1.2rem;
-            transition: all 0.3s ease;
+            transition: var(--transition);
         }
         
         .social-link:hover {
-            background-color: #3498db;
+            background-color: var(--primary);
             transform: translateY(-3px);
         }
         
@@ -1039,14 +1129,14 @@
         
         .footer-link {
             color: #bdc3c7;
-            transition: all 0.3s ease;
+            transition: var(--transition);
             display: flex;
             align-items: center;
             gap: 0.5rem;
         }
         
         .footer-link:hover {
-            color: #3498db;
+            color: var(--primary);
             transform: translateX(5px);
         }
         
@@ -1066,7 +1156,7 @@
             align-items: center;
             justify-content: center;
             font-size: 1.2rem;
-            color: #3498db;
+            color: var(--primary);
         }
         
         .footer-contact-text {
@@ -1210,7 +1300,7 @@
                 <div class="hero-text">
                     <p class="hero-greeting">Hello, I'm</p>
                     <h1 class="hero-title">Soham Santosh Pawar</h1>
-                    <h3 class="hero-subtitle">AI & ML Engineer | AWS re/Start Program</h3>
+                    <h3 class="hero-subtitle">AI & ML Engineer | AWS Cloud Practitioner</h3>
                     <p class="hero-desc">I am a passionate AI and Machine Learning engineer with expertise in developing intelligent systems and user-friendly applications. Currently enhancing my cloud computing skills through the AWS re/Start program.</p>
                     <div class="hero-btns">
                         <a href="#contact" class="btn">Contact Me</a>
@@ -1220,8 +1310,16 @@
                 <div class="hero-img">
                     <div class="hero-img-inner">
                         <img src="soham pawar.jpg" alt="Soham Pawar">
-                        <div class="aws-badge">
-                            <i class="fab fa-aws"></i> AWS re/Start
+                    </div>
+                    <div class="floating-elements">
+                        <div class="floating-element">
+                            <i class="fab fa-python"></i>
+                        </div>
+                        <div class="floating-element">
+                            <i class="fab fa-aws"></i>
+                        </div>
+                        <div class="floating-element">
+                            <i class="fas fa-robot"></i>
                         </div>
                     </div>
                 </div>
@@ -1285,45 +1383,39 @@
                     <div class="skills-grid">
                         <div class="skill-item">
                             <div class="skill-icon">
-                                <img src="Logo/python logo.jpeg" alt="Python Logo">
+                                <i class="fab fa-python"></i>
                             </div>
                             <p class="skill-name">Python</p>
                         </div>
                         <div class="skill-item">
                             <div class="skill-icon">
-                                <img src="Logo/r.jpg" alt="R Logo">
+                                <i class="fab fa-r-project"></i>
                             </div>
                             <p class="skill-name">R</p>
                         </div>
                         <div class="skill-item">
                             <div class="skill-icon">
-                                <img src="Logo/c++.jpg" alt="C++ Logo">
+                                <i class="fab fa-js"></i>
                             </div>
-                            <p class="skill-name">C++</p>
+                            <p class="skill-name">JavaScript</p>
                         </div>
                         <div class="skill-item">
                             <div class="skill-icon">
-                                <img src="Logo/java.jpg" alt="Java Logo">
+                                <i class="fab fa-java"></i>
                             </div>
                             <p class="skill-name">Core Java</p>
                         </div>
                         <div class="skill-item">
                             <div class="skill-icon">
-                                <img src="Logo/html.jpg" alt="HTML Logo">
+                                <i class="fab fa-html5"></i>
                             </div>
                             <p class="skill-name">HTML</p>
                         </div>
                         <div class="skill-item">
                             <div class="skill-icon">
-                                <img src="Logo/css.jpg" alt="CSS Logo">
+                                <i class="fab fa-css3-alt"></i>
                             </div>
                             <p class="skill-name">CSS</p>
-                        </div>
-                        <div class="skill-item">
-                            <div class="skill-icon">
-                                <img src="Logo/js.jpeg" alt="JavaScript Logo">
-                            </div>
-                            <p class="skill-name">JavaScript</p>
                         </div>
                     </div>
                 </div>
@@ -1333,31 +1425,25 @@
                     <div class="skills-grid">
                         <div class="skill-item">
                             <div class="skill-icon">
-                                <img src="Logo/skit.jpg" alt="Scikit Learn Logo">
+                                <i class="fas fa-brain"></i>
                             </div>
                             <p class="skill-name">Scikit Learn</p>
                         </div>
                         <div class="skill-item">
                             <div class="skill-icon">
-                                <img src="Logo/ten.jpg" alt="TensorFlow Logo">
+                                <i class="fas fa-project-diagram"></i>
                             </div>
                             <p class="skill-name">TensorFlow</p>
                         </div>
                         <div class="skill-item">
                             <div class="skill-icon">
-                                <img src="Logo/gpt.jpg" alt="GPT Logo">
+                                <i class="fas fa-robot"></i>
                             </div>
                             <p class="skill-name">GPT Models</p>
                         </div>
                         <div class="skill-item">
                             <div class="skill-icon">
-                                <img src="Logo/hf.jpg" alt="Hugging Face Logo">
-                            </div>
-                            <p class="skill-name">Hugging Face</p>
-                        </div>
-                        <div class="skill-item">
-                            <div class="skill-icon">
-                                <img src="Logo/pe.jpg" alt="Prompt Engineering Logo">
+                                <i class="fas fa-comment-alt"></i>
                             </div>
                             <p class="skill-name">Prompt Engineering</p>
                         </div>
@@ -1369,25 +1455,25 @@
                     <div class="skills-grid">
                         <div class="skill-item">
                             <div class="skill-icon">
-                                <img src="Logo/pd.jpeg" alt="Pandas Logo">
+                                <i class="fas fa-table"></i>
                             </div>
                             <p class="skill-name">Pandas</p>
                         </div>
                         <div class="skill-item">
                             <div class="skill-icon">
-                                <img src="Logo/np.jpg" alt="Numpy Logo">
+                                <i class="fas fa-calculator"></i>
                             </div>
                             <p class="skill-name">Numpy</p>
                         </div>
                         <div class="skill-item">
                             <div class="skill-icon">
-                                <img src="Logo/m.jpg" alt="Matplotlib Logo">
+                                <i class="fas fa-chart-line"></i>
                             </div>
                             <p class="skill-name">Matplotlib</p>
                         </div>
                         <div class="skill-item">
                             <div class="skill-icon">
-                                <img src="Logo/sns.jpg" alt="Seaborn Logo">
+                                <i class="fas fa-chart-bar"></i>
                             </div>
                             <p class="skill-name">Seaborn</p>
                         </div>
@@ -1399,43 +1485,43 @@
                     <div class="skills-grid">
                         <div class="skill-item">
                             <div class="skill-icon">
-                                <img src="Logo/ang.jpg" alt="Angular Logo">
+                                <i class="fab fa-angular"></i>
                             </div>
                             <p class="skill-name">Angular Js</p>
                         </div>
                         <div class="skill-item">
                             <div class="skill-icon">
-                                <img src="Logo/git.jpg" alt="Git Logo">
+                                <i class="fab fa-git-alt"></i>
                             </div>
                             <p class="skill-name">Git & GitHub</p>
                         </div>
                         <div class="skill-item">
                             <div class="skill-icon">
-                                <img src="Logo/vs.jpg" alt="VS Code Logo">
+                                <i class="fas fa-code"></i>
                             </div>
                             <p class="skill-name">VS Code</p>
                         </div>
                         <div class="skill-item">
                             <div class="skill-icon">
-                                <img src="Logo/mg.jpg" alt="MongoDB Logo">
+                                <i class="fas fa-database"></i>
                             </div>
                             <p class="skill-name">MongoDB</p>
                         </div>
                         <div class="skill-item">
                             <div class="skill-icon">
-                                <img src="Logo/dj.jpg" alt="Django Logo">
+                                <i class="fab fa-python"></i>
                             </div>
                             <p class="skill-name">Django</p>
                         </div>
                         <div class="skill-item">
                             <div class="skill-icon">
-                                <img src="Logo/streamlit.jpg" alt="Streamlit Logo">
+                                <i class="fas fa-stream"></i>
                             </div>
                             <p class="skill-name">Streamlit</p>
                         </div>
                         <div class="skill-item">
                             <div class="skill-icon">
-                                <img src="Logo/flask.jpg" alt="Flask Logo">
+                                <i class="fas fa-flask"></i>
                             </div>
                             <p class="skill-name">Flask</p>
                         </div>
@@ -1447,15 +1533,57 @@
                     <div class="skills-grid">
                         <div class="skill-item">
                             <div class="skill-icon">
-                                <img src="Logo/power.jpg" alt="Power BI Logo">
+                                <i class="fas fa-chart-pie"></i>
                             </div>
                             <p class="skill-name">Microsoft Power BI</p>
                         </div>
                         <div class="skill-item">
                             <div class="skill-icon">
-                                <img src="Logo/excel.jpg" alt="Excel Logo">
+                                <i class="fas fa-file-excel"></i>
                             </div>
                             <p class="skill-name">Microsoft Excel</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="skills-category">
+                    <h3 class="category-title">AWS & DevOps</h3>
+                    <div class="skills-grid">
+                        <div class="skill-item">
+                            <div class="skill-icon">
+                                <i class="fab fa-aws"></i>
+                            </div>
+                            <p class="skill-name">AWS EC2</p>
+                        </div>
+                        <div class="skill-item">
+                            <div class="skill-icon">
+                                <i class="fas fa-cloud"></i>
+                            </div>
+                            <p class="skill-name">AWS S3</p>
+                        </div>
+                        <div class="skill-item">
+                            <div class="skill-icon">
+                                <i class="fas fa-database"></i>
+                            </div>
+                            <p class="skill-name">AWS RDS</p>
+                        </div>
+                        <div class="skill-item">
+                            <div class="skill-icon">
+                                <i class="fas fa-server"></i>
+                            </div>
+                            <p class="skill-name">Load Balancing</p>
+                        </div>
+                        <div class="skill-item">
+                            <div class="skill-icon">
+                                <i class="fab fa-docker"></i>
+                            </div>
+                            <p class="skill-name">Docker</p>
+                        </div>
+                        <div class="skill-item">
+                            <div class="skill-icon">
+                                <i class="fas fa-expand-arrows-alt"></i>
+                            </div>
+                            <p class="skill-name">Auto Scaling</p>
                         </div>
                     </div>
                 </div>
@@ -1498,10 +1626,10 @@
                             <p class="aws-feature-text">Career coaching and interview preparation</p>
                         </div>
                     </div>
-                    <a href="#contact" class="btn" style="background-color: #FF9900;">Learn More</a>
+                    <a href="#contact" class="btn btn-accent">Learn More</a>
                 </div>
                 <div class="aws-img">
-                    <div class="aws-logo">
+                    <div class="aws-logo float">
                         <i class="fab fa-aws"></i>
                     </div>
                 </div>
@@ -1629,7 +1757,45 @@
             <h2 class="section-title">My <span>Projects</span></h2>
             <div class="projects-grid">
                 <div class="project-card">
-                    <div class="project-img" data-title="Brain Tumor Detection"></div>
+                    <div class="project-img project-img-1" data-title="Contact App on AWS"></div>
+                    <div class="project-content">
+                        <h3 class="project-title">Contact App on AWS (Full Stack)</h3>
+                        <p class="project-desc">Built cloud-ready contact management application with Node.js, MySQL, Docker, and deployed on AWS EC2 with load balancing and auto scaling for high-traffic workloads.</p>
+                        <div class="project-tech">
+                            <span class="project-tech-item">Node.js</span>
+                            <span class="project-tech-item">MySQL</span>
+                            <span class="project-tech-item">Docker</span>
+                            <span class="project-tech-item">AWS EC2</span>
+                            <span class="project-tech-item">Load Balancing</span>
+                        </div>
+                        <div class="project-links">
+                            <a href="#" class="project-link">View Project</a>
+                            <a href="#" class="project-link" target="_blank">GitHub</a>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="project-card">
+                    <div class="project-img project-img-2" data-title="Static Website on AWS"></div>
+                    <div class="project-content">
+                        <h3 class="project-title">Static Website Hosting on AWS</h3>
+                        <p class="project-desc">Deployed a responsive static website using AWS S3, CloudFront, and Route 53 with CI/CD pipeline for automated deployments and global content delivery.</p>
+                        <div class="project-tech">
+                            <span class="project-tech-item">AWS S3</span>
+                            <span class="project-tech-item">CloudFront</span>
+                            <span class="project-tech-item">Route 53</span>
+                            <span class="project-tech-item">CI/CD</span>
+                            <span class="project-tech-item">HTML/CSS/JS</span>
+                        </div>
+                        <div class="project-links">
+                            <a href="#" class="project-link">View Project</a>
+                            <a href="#" class="project-link" target="_blank">GitHub</a>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="project-card">
+                    <div class="project-img project-img-3" data-title="Brain Tumor Detection"></div>
                     <div class="project-content">
                         <h3 class="project-title">Brain Tumor Detection Using Image Processing</h3>
                         <p class="project-desc">A system for detecting brain tumors from medical images using image processing techniques with a user-friendly web interface for medical professionals.</p>
@@ -1648,7 +1814,7 @@
                 </div>
                 
                 <div class="project-card">
-                    <div class="project-img" data-title="legal_document_summarization"></div>
+                    <div class="project-img project-img-4" data-title="legal_document_summarization"></div>
                     <div class="project-content">
                         <h3 class="project-title">legal_document_summarization</h3>
                         <p class="project-desc">A comprehensive ERP Student Management System for managing various academic and administrative tasks in educational institutions.</p>
@@ -1709,6 +1875,15 @@
         <div class="container">
             <h2 class="section-title">My <span>Certifications</span></h2>
             <div class="certifications-grid">
+                <div class="certification-card">
+                    <h3 class="certification-title">Kiran Academy AI Python Full Stack</h3>
+                    <p class="certification-issuer">Kiran Academy</p>
+                    <p class="certification-date">2025</p>
+                    <div class="project-links">
+                        <a href="https://drive.google.com/file/d/1q6kVqn7A66sLX1wgqjOIu7VGFNgoqXGO/view?usp=drive_link" class="project-link">View Certificate</a>
+                    </div>
+                </div>
+                
                 <div class="certification-card">
                     <h3 class="certification-title">Principles of Generative AI Certification</h3>
                     <p class="certification-issuer">Infosys Springboard</p>
@@ -1962,6 +2137,25 @@
 
         document.querySelectorAll('.skill-item, .project-card, .certification-card').forEach(el => {
             observer.observe(el);
+        });
+
+        // Typing effect for hero title
+        const heroTitle = document.querySelector('.hero-title');
+        const originalText = heroTitle.textContent;
+        heroTitle.textContent = '';
+        
+        let i = 0;
+        function typeWriter() {
+            if (i < originalText.length) {
+                heroTitle.textContent += originalText.charAt(i);
+                i++;
+                setTimeout(typeWriter, 100);
+            }
+        }
+        
+        // Start typing effect after page load
+        window.addEventListener('load', () => {
+            setTimeout(typeWriter, 500);
         });
     </script>
 </body>
