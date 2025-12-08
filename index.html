@@ -3,9 +3,10 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Soham Pawar </title>
+    <title>Soham Pawar | AI/ML Engineer & DevOps Specialist</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <style>
         /* === VARIABLES === */
         :root {
@@ -13,6 +14,7 @@
             --primary-dark: #2980b9;
             --secondary: #2d3e50;
             --accent: #FF9900;
+            --devops-accent: #6c5ce7;
             --light: #f9f9f9;
             --gray: #7f8c8d;
             --dark: #333;
@@ -121,6 +123,14 @@
             background-color: #e68900;
         }
         
+        .btn-devops {
+            background-color: var(--devops-accent);
+        }
+        
+        .btn-devops:hover {
+            background-color: #5b4bd8;
+        }
+        
         /* === ANIMATIONS === */
         @keyframes fadeIn {
             from { opacity: 0; transform: translateY(20px); }
@@ -133,12 +143,31 @@
             100% { transform: translateY(0px); }
         }
         
+        @keyframes pulse {
+            0% { transform: scale(1); }
+            50% { transform: scale(1.05); }
+            100% { transform: scale(1); }
+        }
+        
+        @keyframes rotate {
+            from { transform: rotate(0deg); }
+            to { transform: rotate(360deg); }
+        }
+        
         .animate {
             animation: fadeIn 0.8s ease forwards;
         }
         
         .float {
             animation: float 5s ease-in-out infinite;
+        }
+        
+        .pulse {
+            animation: pulse 2s infinite;
+        }
+        
+        .rotate {
+            animation: rotate 20s linear infinite;
         }
         
         /* === HEADER === */
@@ -294,6 +323,37 @@
             font-weight: 500;
             color: var(--gray);
             margin-bottom: 2rem;
+        }
+        
+        .hero-highlights {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 1rem;
+            margin-bottom: 2rem;
+        }
+        
+        .hero-highlight {
+            background-color: white;
+            padding: 0.5rem 1.2rem;
+            border-radius: 30px;
+            font-size: 0.9rem;
+            font-weight: 500;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.05);
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+        
+        .hero-highlight:nth-child(1) {
+            border-left: 4px solid var(--primary);
+        }
+        
+        .hero-highlight:nth-child(2) {
+            border-left: 4px solid var(--accent);
+        }
+        
+        .hero-highlight:nth-child(3) {
+            border-left: 4px solid var(--devops-accent);
         }
         
         .hero-desc {
@@ -456,7 +516,7 @@
         }
         
         .skills-content {
-            max-width: 800px;
+            max-width: 900px;
             margin: 0 auto;
         }
         
@@ -471,23 +531,31 @@
             color: var(--secondary);
             border-left: 4px solid var(--primary);
             padding-left: 1rem;
+            display: flex;
+            align-items: center;
+            gap: 0.8rem;
         }
         
         .skills-grid {
             display: grid;
-            grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
+            grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
             gap: 1.5rem;
         }
         
         .skill-item {
             background-color: white;
-            padding: 1.2rem;
+            padding: 1.5rem;
             border-radius: 10px;
             box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
             transition: var(--transition);
             text-align: center;
             position: relative;
             overflow: hidden;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            min-height: 140px;
         }
         
         .skill-item:hover {
@@ -514,7 +582,7 @@
         .skill-icon {
             font-size: 2.5rem;
             color: var(--primary);
-            margin-bottom: 0.5rem;
+            margin-bottom: 0.8rem;
             display: flex;
             justify-content: center;
             align-items: center;
@@ -529,6 +597,194 @@
         
         .skill-name {
             font-weight: 500;
+            font-size: 0.95rem;
+        }
+        
+        /* === DEVOPS SECTION === */
+        .devops-section {
+            background: linear-gradient(135deg, #2d3436 0%, #2d3436 100%);
+            color: white;
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .devops-section::before {
+            content: '';
+            position: absolute;
+            top: -100px;
+            right: -100px;
+            width: 300px;
+            height: 300px;
+            border-radius: 50%;
+            background: radial-gradient(circle, rgba(108, 92, 231, 0.1) 0%, rgba(108, 92, 231, 0.05) 70%);
+        }
+        
+        .devops-section::after {
+            content: '';
+            position: absolute;
+            bottom: -100px;
+            left: -100px;
+            width: 300px;
+            height: 300px;
+            border-radius: 50%;
+            background: radial-gradient(circle, rgba(108, 92, 231, 0.1) 0%, rgba(108, 92, 231, 0.05) 70%);
+        }
+        
+        .devops-content {
+            position: relative;
+            z-index: 1;
+        }
+        
+        .devops-title {
+            font-size: 2.5rem;
+            font-weight: 700;
+            margin-bottom: 1.5rem;
+            color: white;
+            text-align: center;
+        }
+        
+        .devops-subtitle {
+            text-align: center;
+            color: #bdc3c7;
+            margin-bottom: 3rem;
+            max-width: 800px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+        
+        .devops-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+            gap: 1.5rem;
+            margin-bottom: 3rem;
+        }
+        
+        .devops-card {
+            background-color: rgba(255, 255, 255, 0.05);
+            border-radius: 10px;
+            padding: 1.5rem;
+            transition: var(--transition);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            backdrop-filter: blur(10px);
+            -webkit-backdrop-filter: blur(10px);
+        }
+        
+        .devops-card:hover {
+            transform: translateY(-5px);
+            border-color: var(--devops-accent);
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+        }
+        
+        .devops-card-header {
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+            margin-bottom: 1rem;
+        }
+        
+        .devops-icon {
+            font-size: 2rem;
+            color: var(--devops-accent);
+        }
+        
+        .devops-card-title {
+            font-size: 1.3rem;
+            font-weight: 600;
+        }
+        
+        .devops-card-list {
+            display: flex;
+            flex-direction: column;
+            gap: 0.8rem;
+        }
+        
+        .devops-item {
+            display: flex;
+            align-items: center;
+            gap: 0.8rem;
+            color: #bdc3c7;
+        }
+        
+        .devops-item i {
+            color: var(--devops-accent);
+            font-size: 0.9rem;
+        }
+        
+        .devops-visual {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin-top: 3rem;
+            position: relative;
+            height: 200px;
+        }
+        
+        .devops-circle {
+            width: 150px;
+            height: 150px;
+            border-radius: 50%;
+            background: conic-gradient(var(--devops-accent), #3498db, #FF9900, #2ecc71, var(--devops-accent));
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            animation: rotate 20s linear infinite;
+            position: relative;
+        }
+        
+        .devops-inner-circle {
+            width: 100px;
+            height: 100px;
+            border-radius: 50%;
+            background-color: #2d3436;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.5rem;
+            color: white;
+            font-weight: bold;
+        }
+        
+        .devops-circle-item {
+            position: absolute;
+            width: 40px;
+            height: 40px;
+            background-color: #2d3436;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.2rem;
+            color: white;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+            border: 2px solid;
+        }
+        
+        .devops-circle-item:nth-child(1) {
+            top: 0;
+            left: 50%;
+            transform: translateX(-50%);
+            border-color: var(--devops-accent);
+        }
+        
+        .devops-circle-item:nth-child(2) {
+            top: 50%;
+            right: 0;
+            transform: translateY(-50%);
+            border-color: #3498db;
+        }
+        
+        .devops-circle-item:nth-child(3) {
+            bottom: 0;
+            left: 50%;
+            transform: translateX(-50%);
+            border-color: #FF9900;
+        }
+        
+        .devops-circle-item:nth-child(4) {
+            top: 50%;
+            left: 0;
+            transform: translateY(-50%);
+            border-color: #2ecc71;
         }
         
         /* === AWS SECTION === */
@@ -614,6 +870,7 @@
             justify-content: center;
             gap: 1rem;
             margin-bottom: 2.5rem;
+            flex-wrap: wrap;
         }
         
         .tab-btn {
@@ -776,6 +1033,10 @@
         
         .project-img-4 {
             background: linear-gradient(135deg, #2ecc71, #27ae60);
+        }
+        
+        .project-img-5 {
+            background: linear-gradient(135deg, #6c5ce7, #5b4bd8);
         }
         
         .project-content {
@@ -1170,6 +1431,65 @@
             color: #bdc3c7;
         }
         
+        /* === TOOLTIP === */
+        .tooltip {
+            position: relative;
+            display: inline-block;
+        }
+        
+        .tooltip .tooltiptext {
+            visibility: hidden;
+            width: 200px;
+            background-color: var(--secondary);
+            color: white;
+            text-align: center;
+            border-radius: 6px;
+            padding: 10px;
+            position: absolute;
+            z-index: 1;
+            bottom: 125%;
+            left: 50%;
+            transform: translateX(-50%);
+            opacity: 0;
+            transition: opacity 0.3s;
+            font-size: 0.9rem;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+        }
+        
+        .tooltip .tooltiptext::after {
+            content: "";
+            position: absolute;
+            top: 100%;
+            left: 50%;
+            margin-left: -5px;
+            border-width: 5px;
+            border-style: solid;
+            border-color: var(--secondary) transparent transparent transparent;
+        }
+        
+        .tooltip:hover .tooltiptext {
+            visibility: visible;
+            opacity: 1;
+        }
+        
+        /* === SKILL LEVEL INDICATORS === */
+        .skill-level {
+            display: flex;
+            gap: 0.3rem;
+            margin-top: 0.5rem;
+        }
+        
+        .skill-dot {
+            width: 10px;
+            height: 10px;
+            border-radius: 50%;
+            background-color: #e0e0e0;
+        }
+        
+        .skill-dot.filled {
+            background-color: var(--primary);
+        }
+        
         /* === MEDIA QUERIES === */
         @media (max-width: 992px) {
             .hero-content, .about-content, .aws-content {
@@ -1192,6 +1512,10 @@
             
             .aws-features {
                 grid-template-columns: 1fr;
+            }
+            
+            .devops-grid {
+                grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
             }
         }
         
@@ -1265,6 +1589,14 @@
                 height: 200px;
                 font-size: 3rem;
             }
+            
+            .devops-grid {
+                grid-template-columns: 1fr;
+            }
+            
+            .skills-grid {
+                grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+            }
         }
     </style>
 </head>
@@ -1278,6 +1610,7 @@
                     <li><a href="#home" class="nav-link">Home</a></li>
                     <li><a href="#about" class="nav-link">About</a></li>
                     <li><a href="#skills" class="nav-link">Skills</a></li>
+                    <li><a href="#devops" class="nav-link">DevOps</a></li>
                     <li><a href="#aws" class="nav-link">AWS</a></li>
                     <li><a href="#experience" class="nav-link">Experience</a></li>
                     <li><a href="#projects" class="nav-link">Projects</a></li>
@@ -1300,11 +1633,25 @@
                 <div class="hero-text">
                     <p class="hero-greeting">Hello, I'm</p>
                     <h1 class="hero-title">Soham Santosh Pawar</h1>
-                    <h3 class="hero-subtitle">AI & ML Engineer | AWS Cloud Practitioner</h3>
-                    <p class="hero-desc">I am a passionate AI and Machine Learning engineer with expertise in developing intelligent systems and user-friendly applications. Currently enhancing my cloud computing skills through the AWS re/Start program.</p>
+                    <h3 class="hero-subtitle">AI & ML Engineer | DevOps Specialist | AWS Cloud Practitioner</h3>
+                    
+                    <div class="hero-highlights">
+                        <div class="hero-highlight">
+                            <i class="fas fa-robot"></i> AI/ML Engineering
+                        </div>
+                        <div class="hero-highlight">
+                            <i class="fas fa-cloud"></i> Cloud & DevOps
+                        </div>
+                        <div class="hero-highlight">
+                            <i class="fas fa-code"></i> Full Stack Development
+                        </div>
+                    </div>
+                    
+                    <p class="hero-desc">I am a passionate AI and Machine Learning engineer with expertise in developing intelligent systems and user-friendly applications. Currently enhancing my cloud computing and DevOps skills through the AWS re/Start program.</p>
                     <div class="hero-btns">
                         <a href="#contact" class="btn">Contact Me</a>
                         <a href="#projects" class="btn btn-outline">View Projects</a>
+                        <a href="#devops" class="btn btn-devops">DevOps Skills</a>
                     </div>
                 </div>
                 <div class="hero-img">
@@ -1338,9 +1685,9 @@
                     </div>
                 </div>
                 <div class="about-text">
-                    <h3 class="about-title">AI & Machine Learning Engineer</h3>
+                    <h3 class="about-title">AI & Machine Learning Engineer | DevOps Specialist</h3>
                     <p class="about-desc">I am an aspiring AI and Machine Learning Engineer with a strong foundation in programming, data analysis, and web development. Currently pursuing my Bachelor's degree in AI and ML, I am passionate about leveraging technology to solve real-world problems.</p>
-                    <p class="about-desc">As a participant in the AWS re/Start program, I'm gaining valuable cloud computing skills to complement my AI expertise. My projects and internships have equipped me with the skills to develop intelligent systems and user-friendly applications.</p>
+                    <p class="about-desc">As a participant in the AWS re/Start program, I'm gaining valuable cloud computing and DevOps skills to complement my AI expertise. My projects and internships have equipped me with the skills to develop intelligent systems and user-friendly applications.</p>
                     <div class="about-info">
                         <div class="info-item">
                             <span class="info-title">Name:</span>
@@ -1379,7 +1726,7 @@
             <h2 class="section-title">My <span>Skills</span></h2>
             <div class="skills-content">
                 <div class="skills-category">
-                    <h3 class="category-title">Programming Languages</h3>
+                    <h3 class="category-title"><i class="fas fa-code"></i> Programming Languages</h3>
                     <div class="skills-grid">
                         <div class="skill-item">
                             <div class="skill-icon">
@@ -1389,9 +1736,9 @@
                         </div>
                         <div class="skill-item">
                             <div class="skill-icon">
-                                <i class="fab fa-r-project"></i>
+                                <i class="fas fa-terminal"></i>
                             </div>
-                            <p class="skill-name">R</p>
+                            <p class="skill-name">Bash Scripting</p>
                         </div>
                         <div class="skill-item">
                             <div class="skill-icon">
@@ -1401,34 +1748,22 @@
                         </div>
                         <div class="skill-item">
                             <div class="skill-icon">
+                                <i class="fab fa-r-project"></i>
+                            </div>
+                            <p class="skill-name">R</p>
+                        </div>
+                        <div class="skill-item">
+                            <div class="skill-icon">
                                 <i class="fab fa-java"></i>
                             </div>
                             <p class="skill-name">Core Java</p>
-                        </div>
-                        <div class="skill-item">
-                            <div class="skill-icon">
-                                <i class="fab fa-html5"></i>
-                            </div>
-                            <p class="skill-name">HTML</p>
-                        </div>
-                        <div class="skill-item">
-                            <div class="skill-icon">
-                                <i class="fab fa-css3-alt"></i>
-                            </div>
-                            <p class="skill-name">CSS</p>
                         </div>
                     </div>
                 </div>
                 
                 <div class="skills-category">
-                    <h3 class="category-title">AI & Machine Learning</h3>
+                    <h3 class="category-title"><i class="fas fa-brain"></i> AI & Machine Learning</h3>
                     <div class="skills-grid">
-                        <div class="skill-item">
-                            <div class="skill-icon">
-                                <i class="fas fa-brain"></i>
-                            </div>
-                            <p class="skill-name">Scikit Learn</p>
-                        </div>
                         <div class="skill-item">
                             <div class="skill-icon">
                                 <i class="fas fa-project-diagram"></i>
@@ -1439,7 +1774,13 @@
                             <div class="skill-icon">
                                 <i class="fas fa-robot"></i>
                             </div>
-                            <p class="skill-name">GPT Models</p>
+                            <p class="skill-name">GPT & LLMs</p>
+                        </div>
+                        <div class="skill-item">
+                            <div class="skill-icon">
+                                <i class="fas fa-brain"></i>
+                            </div>
+                            <p class="skill-name">Scikit Learn</p>
                         </div>
                         <div class="skill-item">
                             <div class="skill-icon">
@@ -1447,11 +1788,23 @@
                             </div>
                             <p class="skill-name">Prompt Engineering</p>
                         </div>
+                        <div class="skill-item">
+                            <div class="skill-icon">
+                                <i class="fas fa-language"></i>
+                            </div>
+                            <p class="skill-name">LangChain</p>
+                        </div>
+                        <div class="skill-item">
+                            <div class="skill-icon">
+                                <i class="fas fa-eye"></i>
+                            </div>
+                            <p class="skill-name">Computer Vision</p>
+                        </div>
                     </div>
                 </div>
                 
                 <div class="skills-category">
-                    <h3 class="category-title">Data Science</h3>
+                    <h3 class="category-title"><i class="fas fa-chart-bar"></i> Data Science & Analysis</h3>
                     <div class="skills-grid">
                         <div class="skill-item">
                             <div class="skill-icon">
@@ -1477,115 +1830,187 @@
                             </div>
                             <p class="skill-name">Seaborn</p>
                         </div>
-                    </div>
-                </div>
-                
-                <div class="skills-category">
-                    <h3 class="category-title">Web Development & Tools</h3>
-                    <div class="skills-grid">
-                        <div class="skill-item">
-                            <div class="skill-icon">
-                                <i class="fab fa-angular"></i>
-                            </div>
-                            <p class="skill-name">Angular Js</p>
-                        </div>
-                        <div class="skill-item">
-                            <div class="skill-icon">
-                                <i class="fab fa-git-alt"></i>
-                            </div>
-                            <p class="skill-name">Git & GitHub</p>
-                        </div>
-                        <div class="skill-item">
-                            <div class="skill-icon">
-                                <i class="fas fa-code"></i>
-                            </div>
-                            <p class="skill-name">VS Code</p>
-                        </div>
-                        <div class="skill-item">
-                            <div class="skill-icon">
-                                <i class="fas fa-database"></i>
-                            </div>
-                            <p class="skill-name">MongoDB</p>
-                        </div>
-                        <div class="skill-item">
-                            <div class="skill-icon">
-                                <i class="fab fa-python"></i>
-                            </div>
-                            <p class="skill-name">Django</p>
-                        </div>
-                        <div class="skill-item">
-                            <div class="skill-icon">
-                                <i class="fas fa-stream"></i>
-                            </div>
-                            <p class="skill-name">Streamlit</p>
-                        </div>
-                        <div class="skill-item">
-                            <div class="skill-icon">
-                                <i class="fas fa-flask"></i>
-                            </div>
-                            <p class="skill-name">Flask</p>
-                        </div>
-                    </div>
-                </div>
-                
-                <div class="skills-category">
-                    <h3 class="category-title">Data Visualization Tools</h3>
-                    <div class="skills-grid">
                         <div class="skill-item">
                             <div class="skill-icon">
                                 <i class="fas fa-chart-pie"></i>
                             </div>
-                            <p class="skill-name">Microsoft Power BI</p>
+                            <p class="skill-name">Power BI</p>
                         </div>
                         <div class="skill-item">
                             <div class="skill-icon">
                                 <i class="fas fa-file-excel"></i>
                             </div>
-                            <p class="skill-name">Microsoft Excel</p>
+                            <p class="skill-name">Excel</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- DevOps Section -->
+    <section id="devops" class="section devops-section">
+        <div class="container">
+            <h2 class="devops-title">DevOps & Cloud <span style="color: #6c5ce7;">Expertise</span></h2>
+            <p class="devops-subtitle">Comprehensive DevOps skills with hands-on experience in cloud infrastructure, CI/CD, containerization, and infrastructure as code</p>
+            
+            <div class="devops-grid">
+                <div class="devops-card">
+                    <div class="devops-card-header">
+                        <div class="devops-icon">
+                            <i class="fab fa-aws"></i>
+                        </div>
+                        <h3 class="devops-card-title">Cloud Platforms</h3>
+                    </div>
+                    <div class="devops-card-list">
+                        <div class="devops-item">
+                            <i class="fas fa-check-circle"></i>
+                            <span>AWS (EC2, S3, RDS, Lambda, VPC)</span>
+                        </div>
+                        <div class="devops-item">
+                            <i class="fas fa-check-circle"></i>
+                            <span>Load Balancing & Auto Scaling</span>
+                        </div>
+                        <div class="devops-item">
+                            <i class="fas fa-check-circle"></i>
+                            <span>CloudFormation</span>
                         </div>
                     </div>
                 </div>
                 
-                <div class="skills-category">
-                    <h3 class="category-title">AWS & DevOps</h3>
-                    <div class="skills-grid">
-                        <div class="skill-item">
-                            <div class="skill-icon">
-                                <i class="fab fa-aws"></i>
-                            </div>
-                            <p class="skill-name">AWS EC2</p>
+                <div class="devops-card">
+                    <div class="devops-card-header">
+                        <div class="devops-icon">
+                            <i class="fab fa-docker"></i>
                         </div>
-                        <div class="skill-item">
-                            <div class="skill-icon">
-                                <i class="fas fa-cloud"></i>
-                            </div>
-                            <p class="skill-name">AWS S3</p>
+                        <h3 class="devops-card-title">Containerization</h3>
+                    </div>
+                    <div class="devops-card-list">
+                        <div class="devops-item">
+                            <i class="fas fa-check-circle"></i>
+                            <span>Docker & Docker Compose</span>
                         </div>
-                        <div class="skill-item">
-                            <div class="skill-icon">
-                                <i class="fas fa-database"></i>
-                            </div>
-                            <p class="skill-name">AWS RDS</p>
+                        <div class="devops-item">
+                            <i class="fas fa-check-circle"></i>
+                            <span>Kubernetes (K8s)</span>
                         </div>
-                        <div class="skill-item">
-                            <div class="skill-icon">
-                                <i class="fas fa-server"></i>
-                            </div>
-                            <p class="skill-name">Load Balancing</p>
-                        </div>
-                        <div class="skill-item">
-                            <div class="skill-icon">
-                                <i class="fab fa-docker"></i>
-                            </div>
-                            <p class="skill-name">Docker</p>
-                        </div>
-                        <div class="skill-item">
-                            <div class="skill-icon">
-                                <i class="fas fa-expand-arrows-alt"></i>
-                            </div>
-                            <p class="skill-name">Auto Scaling</p>
+                        <div class="devops-item">
+                            <i class="fas fa-check-circle"></i>
+                            <span>Container Orchestration</span>
                         </div>
                     </div>
+                </div>
+                
+                <div class="devops-card">
+                    <div class="devops-card-header">
+                        <div class="devops-icon">
+                            <i class="fas fa-code-branch"></i>
+                        </div>
+                        <h3 class="devops-card-title">CI/CD & Version Control</h3>
+                    </div>
+                    <div class="devops-card-list">
+                        <div class="devops-item">
+                            <i class="fas fa-check-circle"></i>
+                            <span>Git, GitHub, GitLab</span>
+                        </div>
+                        <div class="devops-item">
+                            <i class="fas fa-check-circle"></i>
+                            <span>GitHub Actions</span>
+                        </div>
+                        <div class="devops-item">
+                            <i class="fas fa-check-circle"></i>
+                            <span>Jenkins</span>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="devops-card">
+                    <div class="devops-card-header">
+                        <div class="devops-icon">
+                            <i class="fas fa-server"></i>
+                        </div>
+                        <h3 class="devops-card-title">Infrastructure & Monitoring</h3>
+                    </div>
+                    <div class="devops-card-list">
+                        <div class="devops-item">
+                            <i class="fas fa-check-circle"></i>
+                            <span>Terraform (IaC)</span>
+                        </div>
+                        <div class="devops-item">
+                            <i class="fas fa-check-circle"></i>
+                            <span>CloudWatch, Prometheus</span>
+                        </div>
+                        <div class="devops-item">
+                            <i class="fas fa-check-circle"></i>
+                            <span>Grafana</span>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="devops-card">
+                    <div class="devops-card-header">
+                        <div class="devops-icon">
+                            <i class="fas fa-database"></i>
+                        </div>
+                        <h3 class="devops-card-title">Databases</h3>
+                    </div>
+                    <div class="devops-card-list">
+                        <div class="devops-item">
+                            <i class="fas fa-check-circle"></i>
+                            <span>MySQL, PostgreSQL</span>
+                        </div>
+                        <div class="devops-item">
+                            <i class="fas fa-check-circle"></i>
+                            <span>MongoDB</span>
+                        </div>
+                        <div class="devops-item">
+                            <i class="fas fa-check-circle"></i>
+                            <span>SQL & NoSQL</span>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="devops-card">
+                    <div class="devops-card-header">
+                        <div class="devops-icon">
+                            <i class="fas fa-cogs"></i>
+                        </div>
+                        <h3 class="devops-card-title">Backend & APIs</h3>
+                    </div>
+                    <div class="devops-card-list">
+                        <div class="devops-item">
+                            <i class="fas fa-check-circle"></i>
+                            <span>Django, Flask, FastAPI</span>
+                        </div>
+                        <div class="devops-item">
+                            <i class="fas fa-check-circle"></i>
+                            <span>REST API Development</span>
+                        </div>
+                        <div class="devops-item">
+                            <i class="fas fa-check-circle"></i>
+                            <span>Streamlit</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="devops-visual">
+                <div class="devops-circle">
+                    <div class="devops-inner-circle">
+                        DevOps
+                    </div>
+                </div>
+                <div class="devops-circle-item">
+                    <i class="fab fa-aws"></i>
+                </div>
+                <div class="devops-circle-item">
+                    <i class="fab fa-docker"></i>
+                </div>
+                <div class="devops-circle-item">
+                    <i class="fas fa-code-branch"></i>
+                </div>
+                <div class="devops-circle-item">
+                    <i class="fas fa-server"></i>
                 </div>
             </div>
         </div>
@@ -1645,6 +2070,7 @@
                 <button class="tab-btn active" data-tab="all">All</button>
                 <button class="tab-btn" data-tab="internships">Internships</button>
                 <button class="tab-btn" data-tab="projects">Projects</button>
+                <button class="tab-btn" data-tab="devops-exp">DevOps</button>
             </div>
             
             <div id="all" class="tab-content active">
@@ -1748,6 +2174,23 @@
                     </div>
                 </div>
             </div>
+            
+            <div id="devops-exp" class="tab-content">
+                <div class="timeline">
+                    <div class="timeline-item">
+                        <p class="timeline-date">2024 - Present</p>
+                        <h4 class="timeline-title">DevOps Infrastructure Projects</h4>
+                        <p class="timeline-company">Personal & AWS re/Start Projects</p>
+                        <ul class="timeline-desc">
+                            <li>Built CI/CD pipelines using GitHub Actions and Jenkins</li>
+                            <li>Deployed containerized applications using Docker and Kubernetes</li>
+                            <li>Implemented Infrastructure as Code using Terraform</li>
+                            <li>Set up monitoring and alerting with CloudWatch, Prometheus, and Grafana</li>
+                            <li>Configured auto-scaling and load balancing on AWS</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
         </div>
     </section>
 
@@ -1816,8 +2259,8 @@
                 <div class="project-card">
                     <div class="project-img project-img-4" data-title="legal_document_summarization"></div>
                     <div class="project-content">
-                        <h3 class="project-title">legal_document_summarization</h3>
-                        <p class="project-desc">A comprehensive ERP Student Management System for managing various academic and administrative tasks in educational institutions.</p>
+                        <h3 class="project-title">Legal Document Summarization</h3>
+                        <p class="project-desc">AI-powered legal document summarization tool using HuggingFace models and Groq API with Streamlit interface for easy document processing.</p>
                         <div class="project-tech">
                             <span class="project-tech-item">HuggingFace</span>
                             <span class="project-tech-item">Python</span>
@@ -1825,8 +2268,27 @@
                             <span class="project-tech-item">Streamlit</span>
                         </div>
                         <div class="project-links">
-                            <a href="https://huggingface.co/spaces/sohampawar1030/legal_document_summarization_final" class="project-link">View Project On Huggingface</a>
-                            <a href="https://github.com/sohampawar7030/legal_document_summarization" class="project-link">GitHub</a>
+                            <a href="https://huggingface.co/spaces/sohampawar1030/legal_document_summarization_final" class="project-link">View Project</a>
+                            <a href="https://github.com/sohampawar7030/legal_document_summarization" class="project-link" target="_blank">GitHub</a>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="project-card">
+                    <div class="project-img project-img-5" data-title="K8s Deployment"></div>
+                    <div class="project-content">
+                        <h3 class="project-title">Kubernetes Deployment Pipeline</h3>
+                        <p class="project-desc">End-to-end CI/CD pipeline with Kubernetes, Docker, GitHub Actions, and Terraform for automated deployment of microservices architecture.</p>
+                        <div class="project-tech">
+                            <span class="project-tech-item">Kubernetes</span>
+                            <span class="project-tech-item">Docker</span>
+                            <span class="project-tech-item">GitHub Actions</span>
+                            <span class="project-tech-item">Terraform</span>
+                            <span class="project-tech-item">Helm</span>
+                        </div>
+                        <div class="project-links">
+                            <a href="#" class="project-link">View Project</a>
+                            <a href="#" class="project-link" target="_blank">GitHub</a>
                         </div>
                     </div>
                 </div>
@@ -1927,6 +2389,14 @@
                         <a href="https://infyspringboard.onwingspan.com/public-assets/infosysheadstart/cert/lex_auth_01329487630381056036366_shared/1-8bedbbd1-b246-40be-8e68-b9239f2faf23.pdf" class="project-link">View Certificate</a>
                     </div>
                 </div>
+                <div class="certification-card">
+                    <h3 class="certification-title">AWS Cloud Practitioner (In Progress)</h3>
+                    <p class="certification-issuer">AWS re/Start Program</p>
+                    <p class="certification-date">2025</p>
+                    <div class="project-links">
+                        <a href="#aws" class="project-link">Learn More</a>
+                    </div>
+                </div>
             </div>
         </div>
     </section>
@@ -1966,25 +2436,25 @@
                 </div>
                 
                 <div class="contact-form">
-                    <form>
+                    <form id="contact-form">
                         <div class="form-group">
                             <label for="name" class="form-label">Your Name</label>
-                            <input type="text" id="name" class="form-control" placeholder="Enter your name">
+                            <input type="text" id="name" class="form-control" placeholder="Enter your name" required>
                         </div>
                         
                         <div class="form-group">
                             <label for="email" class="form-label">Your Email</label>
-                            <input type="email" id="email" class="form-control" placeholder="Enter your email">
+                            <input type="email" id="email" class="form-control" placeholder="Enter your email" required>
                         </div>
                         
                         <div class="form-group">
                             <label for="subject" class="form-label">Subject</label>
-                            <input type="text" id="subject" class="form-control" placeholder="Enter subject">
+                            <input type="text" id="subject" class="form-control" placeholder="Enter subject" required>
                         </div>
                         
                         <div class="form-group">
                             <label for="message" class="form-label">Message</label>
-                            <textarea id="message" class="form-control form-textarea" placeholder="Enter your message"></textarea>
+                            <textarea id="message" class="form-control form-textarea" placeholder="Enter your message" required></textarea>
                         </div>
                         
                         <button type="submit" class="form-btn">Send Message</button>
@@ -2000,7 +2470,7 @@
             <div class="footer-content">
                 <div>
                     <h3 class="footer-logo">Soham<span>Pawar</span></h3>
-                    <p class="footer-desc">AI & Machine Learning Engineer with a passion for building intelligent systems and user-friendly applications. Currently enhancing cloud computing skills through AWS re/Start program.</p>
+                    <p class="footer-desc">AI & Machine Learning Engineer with a passion for building intelligent systems and user-friendly applications. Currently enhancing cloud computing and DevOps skills through AWS re/Start program.</p>
                     <div class="footer-socials">
                         <a href="https://wa.me/917030806080" class="social-link" target="_blank" aria-label="WhatsApp">
                             <i class="fab fa-whatsapp"></i>
@@ -2023,6 +2493,7 @@
                         <li><a href="#home" class="footer-link">↗️ Home</a></li>
                         <li><a href="#about" class="footer-link">↗️ About</a></li>
                         <li><a href="#skills" class="footer-link">↗️ Skills</a></li>
+                        <li><a href="#devops" class="footer-link">↗️ DevOps</a></li>
                         <li><a href="#aws" class="footer-link">↗️ AWS</a></li>
                         <li><a href="#experience" class="footer-link">↗️ Experience</a></li>
                         <li><a href="#projects" class="footer-link">↗️ Projects</a></li>
@@ -2111,13 +2582,25 @@
         });
 
         // Form Submission
-        const form = document.querySelector('.contact-form form');
+        const form = document.getElementById('contact-form');
         
         form.addEventListener('submit', (e) => {
             e.preventDefault();
             
+            // Form validation
+            const name = document.getElementById('name').value;
+            const email = document.getElementById('email').value;
+            const subject = document.getElementById('subject').value;
+            const message = document.getElementById('message').value;
+            
+            if (!name || !email || !subject || !message) {
+                alert('Please fill in all fields before submitting.');
+                return;
+            }
+            
             // You would normally send the form data to a server here
-            alert('Thank you for your message! I will get back to you soon.');
+            // For now, we'll just show a success message
+            alert('Thank you for your message, ' + name + '! I will get back to you soon.');
             form.reset();
         });
 
@@ -2131,11 +2614,23 @@
             entries.forEach(entry => {
                 if (entry.isIntersecting) {
                     entry.target.classList.add('animate');
+                    
+                    // Add animation delay for staggered effect
+                    if (entry.target.classList.contains('skill-item')) {
+                        const delay = Array.from(document.querySelectorAll('.skill-item')).indexOf(entry.target) * 0.1;
+                        entry.target.style.animationDelay = delay + 's';
+                    }
+                    
+                    if (entry.target.classList.contains('devops-card')) {
+                        const delay = Array.from(document.querySelectorAll('.devops-card')).indexOf(entry.target) * 0.1;
+                        entry.target.style.animationDelay = delay + 's';
+                    }
                 }
             });
         }, observerOptions);
 
-        document.querySelectorAll('.skill-item, .project-card, .certification-card').forEach(el => {
+        // Observe elements for animation
+        document.querySelectorAll('.skill-item, .project-card, .certification-card, .devops-card, .timeline-item, .education-item').forEach(el => {
             observer.observe(el);
         });
 
@@ -2156,6 +2651,72 @@
         // Start typing effect after page load
         window.addEventListener('load', () => {
             setTimeout(typeWriter, 500);
+            
+            // Add tooltip functionality to skills
+            const skillItems = document.querySelectorAll('.skill-item');
+            skillItems.forEach(item => {
+                item.addEventListener('mouseenter', function() {
+                    this.classList.add('pulse');
+                });
+                
+                item.addEventListener('mouseleave', function() {
+                    this.classList.remove('pulse');
+                });
+            });
+        });
+
+        // Tooltip functionality
+        const tooltipElements = document.querySelectorAll('.tooltip');
+        tooltipElements.forEach(element => {
+            element.addEventListener('mouseenter', function() {
+                const tooltip = this.querySelector('.tooltiptext');
+                if (tooltip) {
+                    tooltip.style.visibility = 'visible';
+                    tooltip.style.opacity = '1';
+                }
+            });
+            
+            element.addEventListener('mouseleave', function() {
+                const tooltip = this.querySelector('.tooltiptext');
+                if (tooltip) {
+                    tooltip.style.visibility = 'hidden';
+                    tooltip.style.opacity = '0';
+                }
+            });
+        });
+
+        // Theme toggle (optional future feature)
+        const themeToggle = document.createElement('div');
+        themeToggle.className = 'theme-toggle';
+        themeToggle.innerHTML = '<i class="fas fa-moon"></i>';
+        themeToggle.style.position = 'fixed';
+        themeToggle.style.bottom = '20px';
+        themeToggle.style.right = '20px';
+        themeToggle.style.width = '50px';
+        themeToggle.style.height = '50px';
+        themeToggle.style.backgroundColor = 'var(--primary)';
+        themeToggle.style.borderRadius = '50%';
+        themeToggle.style.display = 'flex';
+        themeToggle.style.alignItems = 'center';
+        themeToggle.style.justifyContent = 'center';
+        themeToggle.style.color = 'white';
+        themeToggle.style.cursor = 'pointer';
+        themeToggle.style.zIndex = '1000';
+        themeToggle.style.boxShadow = '0 4px 8px rgba(0,0,0,0.2)';
+        
+        // Uncomment to add theme toggle
+        // document.body.appendChild(themeToggle);
+        
+        themeToggle.addEventListener('click', () => {
+            document.body.classList.toggle('dark-mode');
+            const icon = themeToggle.querySelector('i');
+            if (document.body.classList.contains('dark-mode')) {
+                icon.className = 'fas fa-sun';
+                themeToggle.style.backgroundColor = '#FF9900';
+            } else {
+                icon.className = 'fas fa-moon';
+                themeToggle.style.backgroundColor = 'var(--primary)';
+            }
         });
     </script>
 </body>
