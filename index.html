@@ -3,10 +3,9 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Soham Pawar | AI/ML Engineer & DevOps Specialist</title>
+    <title>Soham Pawar | DevOps Engineer And AWS Cloud Application Developer| Python Developer</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <style>
         /* === VARIABLES === */
         :root {
@@ -15,6 +14,8 @@
             --secondary: #2d3e50;
             --accent: #FF9900;
             --devops-accent: #6c5ce7;
+            --aws-orange: #FF9900;
+            --aws-dark: #232F3E;
             --light: #f9f9f9;
             --gray: #7f8c8d;
             --dark: #333;
@@ -129,6 +130,15 @@
         
         .btn-devops:hover {
             background-color: #5b4bd8;
+        }
+        
+        .btn-aws {
+            background-color: var(--aws-orange);
+            color: white;
+        }
+        
+        .btn-aws:hover {
+            background-color: #e68900;
         }
         
         /* === ANIMATIONS === */
@@ -365,6 +375,7 @@
         .hero-btns {
             display: flex;
             gap: 1.5rem;
+            flex-wrap: wrap;
         }
         
         .hero-img {
@@ -600,6 +611,116 @@
             font-size: 0.95rem;
         }
         
+        /* === AWS RE/START SECTION === */
+        .aws-restart-section {
+            background: linear-gradient(135deg, #232F3E 0%, #131A22 100%);
+            color: white;
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .aws-restart-section::before {
+            content: '';
+            position: absolute;
+            top: -100px;
+            right: -100px;
+            width: 300px;
+            height: 300px;
+            border-radius: 50%;
+            background: radial-gradient(circle, rgba(255, 153, 0, 0.1) 0%, rgba(255, 153, 0, 0.05) 70%);
+        }
+        
+        .aws-restart-content {
+            position: relative;
+            z-index: 1;
+            display: flex;
+            align-items: center;
+            gap: 4rem;
+        }
+        
+        .aws-restart-text {
+            flex: 1;
+        }
+        
+        .aws-restart-title {
+            font-size: 2.5rem;
+            font-weight: 700;
+            margin-bottom: 1.5rem;
+            color: white;
+        }
+        
+        .aws-restart-subtitle {
+            font-size: 1.3rem;
+            color: var(--aws-orange);
+            margin-bottom: 1.5rem;
+            font-weight: 600;
+        }
+        
+        .aws-restart-desc {
+            margin-bottom: 2rem;
+            font-size: 1.1rem;
+            color: #bdc3c7;
+        }
+        
+        .aws-restart-features {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 1.5rem;
+            margin-bottom: 2.5rem;
+        }
+        
+        .aws-restart-feature {
+            display: flex;
+            align-items: flex-start;
+            gap: 1rem;
+        }
+        
+        .aws-restart-feature-icon {
+            width: 40px;
+            height: 40px;
+            background-color: rgba(255, 153, 0, 0.1);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: var(--aws-orange);
+            font-size: 1.2rem;
+            flex-shrink: 0;
+        }
+        
+        .aws-restart-feature-text {
+            color: #bdc3c7;
+        }
+        
+        .aws-restart-img {
+            flex: 1;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        
+        .aws-restart-logo {
+            width: 300px;
+            height: 300px;
+            background: linear-gradient(135deg, var(--aws-orange), #232F3E);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 5rem;
+            color: white;
+            box-shadow: 0 15px 30px rgba(0, 0, 0, 0.2);
+            flex-direction: column;
+            text-align: center;
+            padding: 2rem;
+        }
+        
+        .aws-restart-logo-text {
+            font-size: 1.5rem;
+            margin-top: 1rem;
+            font-weight: 600;
+        }
+        
         /* === DEVOPS SECTION === */
         .devops-section {
             background: linear-gradient(135deg, #2d3436 0%, #2d3436 100%);
@@ -787,74 +908,81 @@
             border-color: #2ecc71;
         }
         
-        /* === AWS SECTION === */
-        .aws-section {
-            background: linear-gradient(135deg, #232F3E 0%, #131A22 100%);
-            color: white;
+        /* === PYTHON DEVELOPMENT SECTION === */
+        .python-section {
+            background-color: #f1f5f9;
         }
         
-        .aws-content {
+        .python-content {
             display: flex;
             align-items: center;
             gap: 4rem;
         }
         
-        .aws-text {
+        .python-text {
             flex: 1;
         }
         
-        .aws-title {
+        .python-title {
             font-size: 2.5rem;
             font-weight: 700;
             margin-bottom: 1.5rem;
-            color: white;
+            color: var(--secondary);
         }
         
-        .aws-desc {
+        .python-subtitle {
+            font-size: 1.3rem;
+            color: var(--primary);
+            margin-bottom: 1.5rem;
+            font-weight: 600;
+        }
+        
+        .python-desc {
             margin-bottom: 2rem;
             font-size: 1.1rem;
-            color: #bdc3c7;
+            color: #555;
         }
         
-        .aws-features {
+        .python-features {
             display: grid;
             grid-template-columns: repeat(2, 1fr);
             gap: 1.5rem;
             margin-bottom: 2.5rem;
         }
         
-        .aws-feature {
+        .python-feature {
             display: flex;
-            align-items: center;
+            align-items: flex-start;
             gap: 1rem;
         }
         
-        .aws-feature-icon {
+        .python-feature-icon {
             width: 40px;
             height: 40px;
-            background-color: rgba(255, 153, 0, 0.1);
+            background-color: rgba(52, 152, 219, 0.1);
             border-radius: 50%;
             display: flex;
             align-items: center;
             justify-content: center;
-            color: var(--accent);
+            color: var(--primary);
             font-size: 1.2rem;
+            flex-shrink: 0;
         }
         
-        .aws-feature-text {
-            color: #bdc3c7;
+        .python-feature-text {
+            color: #555;
         }
         
-        .aws-img {
+        .python-img {
             flex: 1;
             display: flex;
             justify-content: center;
         }
         
-        .aws-logo {
+        .python-logo {
             width: 300px;
             height: 300px;
-            background: linear-gradient(135deg, var(--accent), #232F3E);
+            background: linear-gradient(135deg, #3776ab, #FFD43B);
             border-radius: 50%;
             display: flex;
             align-items: center;
@@ -862,6 +990,86 @@
             font-size: 5rem;
             color: white;
             box-shadow: 0 15px 30px rgba(0, 0, 0, 0.2);
+        }
+        
+        /* === AWS SERVICES SECTION === */
+        .aws-services-section {
+            background: linear-gradient(135deg, #232F3E 0%, #131A22 100%);
+            color: white;
+        }
+        
+        .aws-services-title {
+            font-size: 2.5rem;
+            font-weight: 700;
+            margin-bottom: 1.5rem;
+            color: white;
+            text-align: center;
+        }
+        
+        .aws-services-subtitle {
+            text-align: center;
+            color: #bdc3c7;
+            margin-bottom: 3rem;
+            max-width: 800px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+        
+        .aws-services-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+            gap: 1.5rem;
+        }
+        
+        .aws-service-card {
+            background-color: rgba(255, 255, 255, 0.05);
+            border-radius: 10px;
+            padding: 1.5rem;
+            transition: var(--transition);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            backdrop-filter: blur(10px);
+            -webkit-backdrop-filter: blur(10px);
+        }
+        
+        .aws-service-card:hover {
+            transform: translateY(-5px);
+            border-color: var(--aws-orange);
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+        }
+        
+        .aws-service-card-header {
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+            margin-bottom: 1rem;
+        }
+        
+        .aws-service-icon {
+            font-size: 2rem;
+            color: var(--aws-orange);
+        }
+        
+        .aws-service-card-title {
+            font-size: 1.3rem;
+            font-weight: 600;
+        }
+        
+        .aws-service-card-list {
+            display: flex;
+            flex-direction: column;
+            gap: 0.8rem;
+        }
+        
+        .aws-service-item {
+            display: flex;
+            align-items: center;
+            gap: 0.8rem;
+            color: #bdc3c7;
+        }
+        
+        .aws-service-item i {
+            color: var(--aws-orange);
+            font-size: 0.9rem;
         }
         
         /* === EXPERIENCE SECTION === */
@@ -1472,32 +1680,14 @@
             opacity: 1;
         }
         
-        /* === SKILL LEVEL INDICATORS === */
-        .skill-level {
-            display: flex;
-            gap: 0.3rem;
-            margin-top: 0.5rem;
-        }
-        
-        .skill-dot {
-            width: 10px;
-            height: 10px;
-            border-radius: 50%;
-            background-color: #e0e0e0;
-        }
-        
-        .skill-dot.filled {
-            background-color: var(--primary);
-        }
-        
         /* === MEDIA QUERIES === */
         @media (max-width: 992px) {
-            .hero-content, .about-content, .aws-content {
+            .hero-content, .about-content, .aws-restart-content, .python-content {
                 flex-direction: column;
                 gap: 2rem;
             }
             
-            .hero-text, .hero-img, .about-text, .about-img, .aws-text, .aws-img {
+            .hero-text, .hero-img, .about-text, .about-img, .aws-restart-text, .aws-restart-img, .python-text, .python-img {
                 flex: none;
                 width: 100%;
             }
@@ -1510,11 +1700,11 @@
                 grid-template-columns: 1fr;
             }
             
-            .aws-features {
+            .aws-restart-features, .python-features {
                 grid-template-columns: 1fr;
             }
             
-            .devops-grid {
+            .devops-grid, .aws-services-grid {
                 grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
             }
         }
@@ -1584,13 +1774,17 @@
                 gap: 2rem;
             }
             
-            .aws-logo {
+            .aws-restart-logo, .python-logo {
                 width: 200px;
                 height: 200px;
                 font-size: 3rem;
             }
             
-            .devops-grid {
+            .aws-restart-logo-text {
+                font-size: 1.2rem;
+            }
+            
+            .devops-grid, .aws-services-grid {
                 grid-template-columns: 1fr;
             }
             
@@ -1610,11 +1804,12 @@
                     <li><a href="#home" class="nav-link">Home</a></li>
                     <li><a href="#about" class="nav-link">About</a></li>
                     <li><a href="#skills" class="nav-link">Skills</a></li>
+                    <li><a href="#aws-restart" class="nav-link">AWS re/Start</a></li>
                     <li><a href="#devops" class="nav-link">DevOps</a></li>
-                    <li><a href="#aws" class="nav-link">AWS</a></li>
+                    <li><a href="#python" class="nav-link">Python</a></li>
+                    <li><a href="#aws-services" class="nav-link">AWS Services</a></li>
                     <li><a href="#experience" class="nav-link">Experience</a></li>
                     <li><a href="#projects" class="nav-link">Projects</a></li>
-                    <li><a href="#education" class="nav-link">Education</a></li>
                     <li><a href="#contact" class="nav-link">Contact</a></li>
                 </ul>
                 <div class="hamburger">
@@ -1633,24 +1828,25 @@
                 <div class="hero-text">
                     <p class="hero-greeting">Hello, I'm</p>
                     <h1 class="hero-title">Soham Santosh Pawar</h1>
-                    <h3 class="hero-subtitle">AI & ML Engineer | DevOps Specialist | AWS Cloud Practitioner</h3>
+                    <h3 class="hero-subtitle">AWS re/Start Graduate | DevOps Specialist | Python Developer</h3>
                     
                     <div class="hero-highlights">
                         <div class="hero-highlight">
-                            <i class="fas fa-robot"></i> AI/ML Engineering
+                            <i class="fab fa-aws"></i> AWS Cloud Practitioner
                         </div>
                         <div class="hero-highlight">
-                            <i class="fas fa-cloud"></i> Cloud & DevOps
+                            <i class="fas fa-code-branch"></i> DevOps & CI/CD
                         </div>
                         <div class="hero-highlight">
-                            <i class="fas fa-code"></i> Full Stack Development
+                            <i class="fab fa-python"></i> Python Development
                         </div>
                     </div>
                     
-                    <p class="hero-desc">I am a passionate AI and Machine Learning engineer with expertise in developing intelligent systems and user-friendly applications. Currently enhancing my cloud computing and DevOps skills through the AWS re/Start program.</p>
+                    <p class="hero-desc">I'm an AWS re/Start graduate with hands-on experience in cloud infrastructure, DevOps practices, and Python development. Currently seeking entry-level opportunities in DevOps, AWS Cloud, and Python development roles.</p>
                     <div class="hero-btns">
                         <a href="#contact" class="btn">Contact Me</a>
                         <a href="#projects" class="btn btn-outline">View Projects</a>
+                        <a href="#aws-restart" class="btn btn-aws">AWS re/Start</a>
                         <a href="#devops" class="btn btn-devops">DevOps Skills</a>
                     </div>
                 </div>
@@ -1666,7 +1862,7 @@
                             <i class="fab fa-aws"></i>
                         </div>
                         <div class="floating-element">
-                            <i class="fas fa-robot"></i>
+                            <i class="fas fa-code-branch"></i>
                         </div>
                     </div>
                 </div>
@@ -1685,9 +1881,9 @@
                     </div>
                 </div>
                 <div class="about-text">
-                    <h3 class="about-title">AI & Machine Learning Engineer | DevOps Specialist</h3>
-                    <p class="about-desc">I am an aspiring AI and Machine Learning Engineer with a strong foundation in programming, data analysis, and web development. Currently pursuing my Bachelor's degree in AI and ML, I am passionate about leveraging technology to solve real-world problems.</p>
-                    <p class="about-desc">As a participant in the AWS re/Start program, I'm gaining valuable cloud computing and DevOps skills to complement my AI expertise. My projects and internships have equipped me with the skills to develop intelligent systems and user-friendly applications.</p>
+                    <h3 class="about-title">AWS re/Start Graduate | DevOps & Python Developer</h3>
+                    <p class="about-desc">I'm a recent AWS re/Start graduate with hands-on experience in cloud computing, DevOps practices, and Python development. I'm passionate about building scalable cloud infrastructure and automating deployment processes.</p>
+                    <p class="about-desc">With a background in AI & ML engineering and multiple internships in software development, I bring a unique combination of technical skills to DevOps and cloud roles. I'm currently seeking entry-level opportunities where I can contribute to building and maintaining cloud infrastructure.</p>
                     <div class="about-info">
                         <div class="info-item">
                             <span class="info-title">Name:</span>
@@ -1702,7 +1898,7 @@
                             <span class="info-value">+91-7030806080</span>
                         </div>
                         <div class="info-item">
-                            <span class="info-title">From:</span>
+                            <span class="info-title">Location:</span>
                             <span class="info-value">Pune, India</span>
                         </div>
                         <div class="info-item">
@@ -1710,8 +1906,8 @@
                             <span class="info-value">B.E. in AI & ML</span>
                         </div>
                         <div class="info-item">
-                            <span class="info-title">CGPA:</span>
-                            <span class="info-value">9.40</span>
+                            <span class="info-title">AWS Status:</span>
+                            <span class="info-value">re/Start Graduate</span>
                         </div>
                     </div>
                     <a href="#contact" class="btn">Contact Me</a>
@@ -1726,7 +1922,91 @@
             <h2 class="section-title">My <span>Skills</span></h2>
             <div class="skills-content">
                 <div class="skills-category">
-                    <h3 class="category-title"><i class="fas fa-code"></i> Programming Languages</h3>
+                    <h3 class="category-title"><i class="fab fa-aws"></i> AWS Cloud</h3>
+                    <div class="skills-grid">
+                        <div class="skill-item">
+                            <div class="skill-icon">
+                                <i class="fab fa-aws"></i>
+                            </div>
+                            <p class="skill-name">AWS Cloud Practitioner</p>
+                        </div>
+                        <div class="skill-item">
+                            <div class="skill-icon">
+                                <i class="fas fa-server"></i>
+                            </div>
+                            <p class="skill-name">EC2, S3, RDS</p>
+                        </div>
+                        <div class="skill-item">
+                            <div class="skill-icon">
+                                <i class="fas fa-code"></i>
+                            </div>
+                            <p class="skill-name">Lambda</p>
+                        </div>
+                        <div class="skill-item">
+                            <div class="skill-icon">
+                                <i class="fas fa-network-wired"></i>
+                            </div>
+                            <p class="skill-name">VPC, IAM</p>
+                        </div>
+                        <div class="skill-item">
+                            <div class="skill-icon">
+                                <i class="fas fa-cloud"></i>
+                            </div>
+                            <p class="skill-name">CloudFormation</p>
+                        </div>
+                        <div class="skill-item">
+                            <div class="skill-icon">
+                                <i class="fas fa-balance-scale"></i>
+                            </div>
+                            <p class="skill-name">Load Balancing</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="skills-category">
+                    <h3 class="category-title"><i class="fas fa-code-branch"></i> DevOps Tools</h3>
+                    <div class="skills-grid">
+                        <div class="skill-item">
+                            <div class="skill-icon">
+                                <i class="fab fa-docker"></i>
+                            </div>
+                            <p class="skill-name">Docker</p>
+                        </div>
+                        <div class="skill-item">
+                            <div class="skill-icon">
+                                <i class="fas fa-cubes"></i>
+                            </div>
+                            <p class="skill-name">Kubernetes</p>
+                        </div>
+                        <div class="skill-item">
+                            <div class="skill-icon">
+                                <i class="fab fa-github"></i>
+                            </div>
+                            <p class="skill-name">GitHub Actions</p>
+                        </div>
+                        <div class="skill-item">
+                            <div class="skill-icon">
+                                <i class="fab fa-jenkins"></i>
+                            </div>
+                            <p class="skill-name">Jenkins</p>
+                        </div>
+                        <div class="skill-item">
+                            <div class="skill-icon">
+                                <i class="fas fa-code"></i>
+                            </div>
+                            <p class="skill-name">Terraform (IaC)</p>
+                        </div>
+                        <div class="skill-item">
+                            <div class="skill-icon">
+                                <i class="fas fa-chart-line"></i>
+                            </div>
+                            <p class="skill-name">Prometheus/Grafana</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="skills-category">
+                    <h3 class="category-title"><i class="fab fa-python"></i> Programming & Development</h3>
                     <div class="skills-grid">
                         <div class="skill-item">
                             <div class="skill-icon">
@@ -1748,100 +2028,69 @@
                         </div>
                         <div class="skill-item">
                             <div class="skill-icon">
-                                <i class="fab fa-r-project"></i>
+                                <i class="fab fa-git-alt"></i>
                             </div>
-                            <p class="skill-name">R</p>
+                            <p class="skill-name">Git</p>
                         </div>
                         <div class="skill-item">
                             <div class="skill-icon">
-                                <i class="fab fa-java"></i>
+                                <i class="fas fa-database"></i>
                             </div>
-                            <p class="skill-name">Core Java</p>
+                            <p class="skill-name">SQL/NoSQL</p>
+                        </div>
+                        <div class="skill-item">
+                            <div class="skill-icon">
+                                <i class="fas fa-code"></i>
+                            </div>
+                            <p class="skill-name">REST APIs</p>
                         </div>
                     </div>
                 </div>
-                
-                <div class="skills-category">
-                    <h3 class="category-title"><i class="fas fa-brain"></i> AI & Machine Learning</h3>
-                    <div class="skills-grid">
-                        <div class="skill-item">
-                            <div class="skill-icon">
-                                <i class="fas fa-project-diagram"></i>
+            </div>
+        </div>
+    </section>
+
+    <!-- AWS re/Start Section -->
+    <section id="aws-restart" class="section aws-restart-section">
+        <div class="container">
+            <h2 class="section-title" style="color: white;">AWS <span style="color: #FF9900;">re/Start</span> Program Graduate</h2>
+            <div class="aws-restart-content">
+                <div class="aws-restart-text">
+                    <h3 class="aws-restart-title">AWS re/Start Graduate</h3>
+                    <p class="aws-restart-subtitle">Completed intensive cloud computing training program</p>
+                    <p class="aws-restart-desc">Successfully completed the AWS re/Start program, a full-time, cohort-based workforce development training program that prepares individuals for careers in cloud computing. This program provided me with practical cloud skills and prepared me for the AWS Cloud Practitioner Certification.</p>
+                    <div class="aws-restart-features">
+                        <div class="aws-restart-feature">
+                            <div class="aws-restart-feature-icon">
+                                <i class="fas fa-cloud"></i>
                             </div>
-                            <p class="skill-name">TensorFlow</p>
+                            <p class="aws-restart-feature-text">Hands-on experience with AWS core services (EC2, S3, RDS, Lambda, VPC, IAM)</p>
                         </div>
-                        <div class="skill-item">
-                            <div class="skill-icon">
-                                <i class="fas fa-robot"></i>
+                        <div class="aws-restart-feature">
+                            <div class="aws-restart-feature-icon">
+                                <i class="fas fa-certificate"></i>
                             </div>
-                            <p class="skill-name">GPT & LLMs</p>
+                            <p class="aws-restart-feature-text">Prepared for AWS Cloud Practitioner Certification</p>
                         </div>
-                        <div class="skill-item">
-                            <div class="skill-icon">
-                                <i class="fas fa-brain"></i>
+                        <div class="aws-restart-feature">
+                            <div class="aws-restart-feature-icon">
+                                <i class="fas fa-laptop-code"></i>
                             </div>
-                            <p class="skill-name">Scikit Learn</p>
+                            <p class="aws-restart-feature-text">Practical labs with real-world cloud scenarios</p>
                         </div>
-                        <div class="skill-item">
-                            <div class="skill-icon">
-                                <i class="fas fa-comment-alt"></i>
+                        <div class="aws-restart-feature">
+                            <div class="aws-restart-feature-icon">
+                                <i class="fas fa-users"></i>
                             </div>
-                            <p class="skill-name">Prompt Engineering</p>
-                        </div>
-                        <div class="skill-item">
-                            <div class="skill-icon">
-                                <i class="fas fa-language"></i>
-                            </div>
-                            <p class="skill-name">LangChain</p>
-                        </div>
-                        <div class="skill-item">
-                            <div class="skill-icon">
-                                <i class="fas fa-eye"></i>
-                            </div>
-                            <p class="skill-name">Computer Vision</p>
+                            <p class="aws-restart-feature-text">Career coaching and interview preparation</p>
                         </div>
                     </div>
+                    <a href="#contact" class="btn btn-accent">Connect With Me</a>
                 </div>
-                
-                <div class="skills-category">
-                    <h3 class="category-title"><i class="fas fa-chart-bar"></i> Data Science & Analysis</h3>
-                    <div class="skills-grid">
-                        <div class="skill-item">
-                            <div class="skill-icon">
-                                <i class="fas fa-table"></i>
-                            </div>
-                            <p class="skill-name">Pandas</p>
-                        </div>
-                        <div class="skill-item">
-                            <div class="skill-icon">
-                                <i class="fas fa-calculator"></i>
-                            </div>
-                            <p class="skill-name">Numpy</p>
-                        </div>
-                        <div class="skill-item">
-                            <div class="skill-icon">
-                                <i class="fas fa-chart-line"></i>
-                            </div>
-                            <p class="skill-name">Matplotlib</p>
-                        </div>
-                        <div class="skill-item">
-                            <div class="skill-icon">
-                                <i class="fas fa-chart-bar"></i>
-                            </div>
-                            <p class="skill-name">Seaborn</p>
-                        </div>
-                        <div class="skill-item">
-                            <div class="skill-icon">
-                                <i class="fas fa-chart-pie"></i>
-                            </div>
-                            <p class="skill-name">Power BI</p>
-                        </div>
-                        <div class="skill-item">
-                            <div class="skill-icon">
-                                <i class="fas fa-file-excel"></i>
-                            </div>
-                            <p class="skill-name">Excel</p>
-                        </div>
+                <div class="aws-restart-img">
+                    <div class="aws-restart-logo float">
+                        <i class="fab fa-aws"></i>
+                        <div class="aws-restart-logo-text">re/Start Graduate</div>
                     </div>
                 </div>
             </div>
@@ -1851,33 +2100,10 @@
     <!-- DevOps Section -->
     <section id="devops" class="section devops-section">
         <div class="container">
-            <h2 class="devops-title">DevOps & Cloud <span style="color: #6c5ce7;">Expertise</span></h2>
-            <p class="devops-subtitle">Comprehensive DevOps skills with hands-on experience in cloud infrastructure, CI/CD, containerization, and infrastructure as code</p>
+            <h2 class="devops-title">DevOps <span style="color: #6c5ce7;">Skills</span></h2>
+            <p class="devops-subtitle">Hands-on experience with DevOps tools and practices for efficient software delivery and infrastructure management</p>
             
             <div class="devops-grid">
-                <div class="devops-card">
-                    <div class="devops-card-header">
-                        <div class="devops-icon">
-                            <i class="fab fa-aws"></i>
-                        </div>
-                        <h3 class="devops-card-title">Cloud Platforms</h3>
-                    </div>
-                    <div class="devops-card-list">
-                        <div class="devops-item">
-                            <i class="fas fa-check-circle"></i>
-                            <span>AWS (EC2, S3, RDS, Lambda, VPC)</span>
-                        </div>
-                        <div class="devops-item">
-                            <i class="fas fa-check-circle"></i>
-                            <span>Load Balancing & Auto Scaling</span>
-                        </div>
-                        <div class="devops-item">
-                            <i class="fas fa-check-circle"></i>
-                            <span>CloudFormation</span>
-                        </div>
-                    </div>
-                </div>
-                
                 <div class="devops-card">
                     <div class="devops-card-header">
                         <div class="devops-icon">
@@ -1892,11 +2118,11 @@
                         </div>
                         <div class="devops-item">
                             <i class="fas fa-check-circle"></i>
-                            <span>Kubernetes (K8s)</span>
+                            <span>Kubernetes (K8s) Basics</span>
                         </div>
                         <div class="devops-item">
                             <i class="fas fa-check-circle"></i>
-                            <span>Container Orchestration</span>
+                            <span>Container Image Management</span>
                         </div>
                     </div>
                 </div>
@@ -1919,7 +2145,7 @@
                         </div>
                         <div class="devops-item">
                             <i class="fas fa-check-circle"></i>
-                            <span>Jenkins</span>
+                            <span>Jenkins Pipeline</span>
                         </div>
                     </div>
                 </div>
@@ -1929,7 +2155,7 @@
                         <div class="devops-icon">
                             <i class="fas fa-server"></i>
                         </div>
-                        <h3 class="devops-card-title">Infrastructure & Monitoring</h3>
+                        <h3 class="devops-card-title">Infrastructure as Code</h3>
                     </div>
                     <div class="devops-card-list">
                         <div class="devops-item">
@@ -1938,11 +2164,11 @@
                         </div>
                         <div class="devops-item">
                             <i class="fas fa-check-circle"></i>
-                            <span>CloudWatch, Prometheus</span>
+                            <span>AWS CloudFormation</span>
                         </div>
                         <div class="devops-item">
                             <i class="fas fa-check-circle"></i>
-                            <span>Grafana</span>
+                            <span>Configuration Management</span>
                         </div>
                     </div>
                 </div>
@@ -1950,45 +2176,22 @@
                 <div class="devops-card">
                     <div class="devops-card-header">
                         <div class="devops-icon">
-                            <i class="fas fa-database"></i>
+                            <i class="fas fa-chart-line"></i>
                         </div>
-                        <h3 class="devops-card-title">Databases</h3>
+                        <h3 class="devops-card-title">Monitoring & Logging</h3>
                     </div>
                     <div class="devops-card-list">
                         <div class="devops-item">
                             <i class="fas fa-check-circle"></i>
-                            <span>MySQL, PostgreSQL</span>
+                            <span>AWS CloudWatch</span>
                         </div>
                         <div class="devops-item">
                             <i class="fas fa-check-circle"></i>
-                            <span>MongoDB</span>
+                            <span>Prometheus</span>
                         </div>
                         <div class="devops-item">
                             <i class="fas fa-check-circle"></i>
-                            <span>SQL & NoSQL</span>
-                        </div>
-                    </div>
-                </div>
-                
-                <div class="devops-card">
-                    <div class="devops-card-header">
-                        <div class="devops-icon">
-                            <i class="fas fa-cogs"></i>
-                        </div>
-                        <h3 class="devops-card-title">Backend & APIs</h3>
-                    </div>
-                    <div class="devops-card-list">
-                        <div class="devops-item">
-                            <i class="fas fa-check-circle"></i>
-                            <span>Django, Flask, FastAPI</span>
-                        </div>
-                        <div class="devops-item">
-                            <i class="fas fa-check-circle"></i>
-                            <span>REST API Development</span>
-                        </div>
-                        <div class="devops-item">
-                            <i class="fas fa-check-circle"></i>
-                            <span>Streamlit</span>
+                            <span>Grafana Dashboards</span>
                         </div>
                     </div>
                 </div>
@@ -2001,9 +2204,6 @@
                     </div>
                 </div>
                 <div class="devops-circle-item">
-                    <i class="fab fa-aws"></i>
-                </div>
-                <div class="devops-circle-item">
                     <i class="fab fa-docker"></i>
                 </div>
                 <div class="devops-circle-item">
@@ -2012,50 +2212,171 @@
                 <div class="devops-circle-item">
                     <i class="fas fa-server"></i>
                 </div>
+                <div class="devops-circle-item">
+                    <i class="fas fa-chart-line"></i>
+                </div>
             </div>
         </div>
     </section>
 
-    <!-- AWS Section -->
-    <section id="aws" class="section aws-section">
+    <!-- Python Development Section -->
+    <section id="python" class="section python-section">
         <div class="container">
-            <h2 class="section-title" style="color: white;">AWS <span style="color: #FF9900;">re/Start</span> Program</h2>
-            <div class="aws-content">
-                <div class="aws-text">
-                    <h3 class="aws-title">Cloud Computing & Career Development</h3>
-                    <p class="aws-desc">I'm currently participating in the AWS re/Start program, a full-time, cohort-based workforce development training program that prepares individuals for careers in cloud computing.</p>
-                    <p class="aws-desc">This program is helping me build practical cloud skills and prepare for the AWS Cloud Practitioner Certification while connecting with potential employers.</p>
-                    <div class="aws-features">
-                        <div class="aws-feature">
-                            <div class="aws-feature-icon">
-                                <i class="fas fa-cloud"></i>
+            <h2 class="section-title">Python <span>Development</span></h2>
+            <div class="python-content">
+                <div class="python-text">
+                    <h3 class="python-title">Python Full Stack Developer</h3>
+                    <p class="python-subtitle">Building scalable applications and APIs with Python</p>
+                    <p class="python-desc">I have hands-on experience in Python development across multiple internships and projects. I've worked with various Python frameworks and libraries to build web applications, APIs, and automation scripts.</p>
+                    <div class="python-features">
+                        <div class="python-feature">
+                            <div class="python-feature-icon">
+                                <i class="fas fa-code"></i>
                             </div>
-                            <p class="aws-feature-text">Hands-on experience with AWS services</p>
+                            <p class="python-feature-text">Python Full Stack Web Development with Django and Flask</p>
                         </div>
-                        <div class="aws-feature">
-                            <div class="aws-feature-icon">
-                                <i class="fas fa-certificate"></i>
+                        <div class="python-feature">
+                            <div class="python-feature-icon">
+                                <i class="fas fa-bolt"></i>
                             </div>
-                            <p class="aws-feature-text">Preparation for AWS Cloud Practitioner Certification</p>
+                            <p class="python-feature-text">FastAPI for building high-performance REST APIs</p>
                         </div>
-                        <div class="aws-feature">
-                            <div class="aws-feature-icon">
-                                <i class="fas fa-laptop-code"></i>
+                        <div class="python-feature">
+                            <div class="python-feature-icon">
+                                <i class="fas fa-database"></i>
                             </div>
-                            <p class="aws-feature-text">Practical labs and real-world scenarios</p>
+                            <p class="python-feature-text">Database integration with SQL and NoSQL databases</p>
                         </div>
-                        <div class="aws-feature">
-                            <div class="aws-feature-icon">
-                                <i class="fas fa-users"></i>
+                        <div class="python-feature">
+                            <div class="python-feature-icon">
+                                <i class="fas fa-cogs"></i>
                             </div>
-                            <p class="aws-feature-text">Career coaching and interview preparation</p>
+                            <p class="python-feature-text">Automation scripts and DevOps tooling with Python</p>
                         </div>
                     </div>
-                    <a href="#contact" class="btn btn-accent">Learn More</a>
+                    <a href="#experience" class="btn">View My Experience</a>
                 </div>
-                <div class="aws-img">
-                    <div class="aws-logo float">
-                        <i class="fab fa-aws"></i>
+                <div class="python-img">
+                    <div class="python-logo float">
+                        <i class="fab fa-python"></i>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- AWS Services Section -->
+    <section id="aws-services" class="section aws-services-section">
+        <div class="container">
+            <h2 class="aws-services-title">AWS <span style="color: #FF9900;">Services</span> Experience</h2>
+            <p class="aws-services-subtitle">Hands-on experience with core AWS services and AI services for building cloud-native applications</p>
+            
+            <div class="aws-services-grid">
+                <div class="aws-service-card">
+                    <div class="aws-service-card-header">
+                        <div class="aws-service-icon">
+                            <i class="fas fa-server"></i>
+                        </div>
+                        <h3 class="aws-service-card-title">Compute & Networking</h3>
+                    </div>
+                    <div class="aws-service-card-list">
+                        <div class="aws-service-item">
+                            <i class="fas fa-check-circle"></i>
+                            <span>EC2 (Elastic Compute Cloud)</span>
+                        </div>
+                        <div class="aws-service-item">
+                            <i class="fas fa-check-circle"></i>
+                            <span>Lambda (Serverless Functions)</span>
+                        </div>
+                        <div class="aws-service-item">
+                            <i class="fas fa-check-circle"></i>
+                            <span>VPC (Virtual Private Cloud)</span>
+                        </div>
+                        <div class="aws-service-item">
+                            <i class="fas fa-check-circle"></i>
+                            <span>ELB (Elastic Load Balancing)</span>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="aws-service-card">
+                    <div class="aws-service-card-header">
+                        <div class="aws-service-icon">
+                            <i class="fas fa-database"></i>
+                        </div>
+                        <h3 class="aws-service-card-title">Storage & Databases</h3>
+                    </div>
+                    <div class="aws-service-card-list">
+                        <div class="aws-service-item">
+                            <i class="fas fa-check-circle"></i>
+                            <span>S3 (Simple Storage Service)</span>
+                        </div>
+                        <div class="aws-service-item">
+                            <i class="fas fa-check-circle"></i>
+                            <span>RDS (Relational Database)</span>
+                        </div>
+                        <div class="aws-service-item">
+                            <i class="fas fa-check-circle"></i>
+                            <span>DynamoDB (NoSQL)</span>
+                        </div>
+                        <div class="aws-service-item">
+                            <i class="fas fa-check-circle"></i>
+                            <span>EFS (Elastic File System)</span>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="aws-service-card">
+                    <div class="aws-service-card-header">
+                        <div class="aws-service-icon">
+                            <i class="fas fa-robot"></i>
+                        </div>
+                        <h3 class="aws-service-card-title">AI & Machine Learning</h3>
+                    </div>
+                    <div class="aws-service-card-list">
+                        <div class="aws-service-item">
+                            <i class="fas fa-check-circle"></i>
+                            <span>SageMaker (ML Platform)</span>
+                        </div>
+                        <div class="aws-service-item">
+                            <i class="fas fa-check-circle"></i>
+                            <span>Comprehend (NLP Service)</span>
+                        </div>
+                        <div class="aws-service-item">
+                            <i class="fas fa-check-circle"></i>
+                            <span>Rekognition (Image Analysis)</span>
+                        </div>
+                        <div class="aws-service-item">
+                            <i class="fas fa-check-circle"></i>
+                            <span>Polly (Text-to-Speech)</span>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="aws-service-card">
+                    <div class="aws-service-card-header">
+                        <div class="aws-service-icon">
+                            <i class="fas fa-cogs"></i>
+                        </div>
+                        <h3 class="aws-service-card-title">Management & Security</h3>
+                    </div>
+                    <div class="aws-service-card-list">
+                        <div class="aws-service-item">
+                            <i class="fas fa-check-circle"></i>
+                            <span>IAM (Identity & Access Mgmt)</span>
+                        </div>
+                        <div class="aws-service-item">
+                            <i class="fas fa-check-circle"></i>
+                            <span>CloudWatch (Monitoring)</span>
+                        </div>
+                        <div class="aws-service-item">
+                            <i class="fas fa-check-circle"></i>
+                            <span>CloudFormation (IaC)</span>
+                        </div>
+                        <div class="aws-service-item">
+                            <i class="fas fa-check-circle"></i>
+                            <span>Auto Scaling</span>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -2069,54 +2390,57 @@
             <div class="experience-tabs">
                 <button class="tab-btn active" data-tab="all">All</button>
                 <button class="tab-btn" data-tab="internships">Internships</button>
-                <button class="tab-btn" data-tab="projects">Projects</button>
-                <button class="tab-btn" data-tab="devops-exp">DevOps</button>
+                <button class="tab-btn" data-tab="aws-projects">AWS Projects</button>
+                <button class="tab-btn" data-tab="python-dev">Python Development</button>
             </div>
             
             <div id="all" class="tab-content active">
                 <div class="timeline">
                     <div class="timeline-item">
                         <p class="timeline-date">September 2024 - February 2025</p>
-                        <h4 class="timeline-title">Artificial Intelligence Intern</h4>
-                        <p class="timeline-company">Infosys Springboard</p>
+                        <h4 class="timeline-title">Infosys Springboard - AI Intern</h4>
+                        <p class="timeline-company">Infosys Springboard (Remote)</p>
                         <ul class="timeline-desc">
-                            <li>Worked with Hugging Face libraries to fine-tune pre-trained models for various NLP tasks</li>
-                            <li>Assisted in collecting, cleaning, and preprocessing large datasets</li>
-                            <li>Gained hands-on experience with state-of-the-art AI models (GPT, Groq Model)</li>
-                            <li>Contributed to prompt engineering techniques to optimize model performance</li>
+                            <li>Worked with AWS AI services including SageMaker, Comprehend, and Rekognition</li>
+                            <li>Automated deployment of AI models using DevOps tools (Docker, GitHub Actions)</li>
+                            <li>Integrated AWS Lambda with AI services for serverless AI applications</li>
+                            <li>Used CloudFormation for infrastructure automation of AI workloads</li>
                         </ul>
                     </div>
                     
                     <div class="timeline-item">
                         <p class="timeline-date">January 2023 - March 2023</p>
-                        <h4 class="timeline-title">Python Full Stack Web Developer Intern</h4>
+                        <h4 class="timeline-title">Python Full Stack Developer Intern</h4>
                         <p class="timeline-company">Elite Software, Pune</p>
                         <ul class="timeline-desc">
-                            <li>Developed and maintained Python-based web applications</li>
-                            <li>Contributed to both front-end and back-end development using HTML, CSS, JavaScript, and Python</li>
-                            <li>Ensured smooth integration between client-side and server-side logic</li>
+                            <li>Developed Python web applications using Django and Flask frameworks</li>
+                            <li>Built REST APIs and integrated with frontend using JavaScript</li>
+                            <li>Worked with MySQL and PostgreSQL databases</li>
+                            <li>Implemented user authentication and authorization systems</li>
                         </ul>
                     </div>
                     
                     <div class="timeline-item">
-                        <p class="timeline-date">2023 - Present</p>
-                        <h4 class="timeline-title">Brain Tumor Detection Using Image Processing</h4>
-                        <p class="timeline-company">Final Year Project</p>
+                        <p class="timeline-date">2024</p>
+                        <h4 class="timeline-title">Python Full Stack Developer Intern</h4>
+                        <p class="timeline-company">Kiran Academy, Warje</p>
                         <ul class="timeline-desc">
-                            <li>Developed a system for detecting brain tumors from medical images using image processing techniques</li>
-                            <li>Built a user-friendly web interface using HTML, CSS, and JavaScript</li>
-                            <li>Implemented image preprocessing techniques for quality improvement and segmentation</li>
+                            <li>Developed full-stack web applications using Python and modern frameworks</li>
+                            <li>Built responsive frontend interfaces with HTML, CSS, and JavaScript</li>
+                            <li>Implemented database designs and optimized queries</li>
+                            <li>Collaborated on team projects using Git version control</li>
                         </ul>
                     </div>
                     
                     <div class="timeline-item">
-                        <p class="timeline-date">2023</p>
-                        <h4 class="timeline-title">Student ERP System</h4>
-                        <p class="timeline-company">Academic Project</p>
+                        <p class="timeline-date">2024 - 2025</p>
+                        <h4 class="timeline-title">AWS re/Start Program</h4>
+                        <p class="timeline-company">AWS Training & Certification</p>
                         <ul class="timeline-desc">
-                            <li>Developed a comprehensive ERP Student Management System</li>
-                            <li>Created a robust solution for managing academic and administrative tasks in educational institutions</li>
-                            <li>Used PHP, HTML, CSS, JavaScript, SQL, and JSON for implementation</li>
+                            <li>Completed intensive cloud computing training program</li>
+                            <li>Gained hands-on experience with AWS core services</li>
+                            <li>Prepared for AWS Cloud Practitioner Certification</li>
+                            <li>Built projects using EC2, S3, RDS, Lambda, and VPC services</li>
                         </ul>
                     </div>
                 </div>
@@ -2126,67 +2450,106 @@
                 <div class="timeline">
                     <div class="timeline-item">
                         <p class="timeline-date">September 2024 - February 2025</p>
-                        <h4 class="timeline-title">Artificial Intelligence Intern</h4>
-                        <p class="timeline-company">Infosys Springboard</p>
+                        <h4 class="timeline-title">Infosys Springboard - AI Intern</h4>
+                        <p class="timeline-company">Infosys Springboard (Remote)</p>
                         <ul class="timeline-desc">
-                            <li>Worked with Hugging Face libraries to fine-tune pre-trained models for various NLP tasks</li>
-                            <li>Assisted in collecting, cleaning, and preprocessing large datasets</li>
-                            <li>Gained hands-on experience with state-of-the-art AI models (GPT, Groq Model)</li>
-                            <li>Contributed to prompt engineering techniques to optimize model performance</li>
+                            <li>Worked with AWS AI services including SageMaker, Comprehend, and Rekognition</li>
+                            <li>Automated deployment of AI models using DevOps tools (Docker, GitHub Actions)</li>
+                            <li>Integrated AWS Lambda with AI services for serverless AI applications</li>
+                            <li>Used CloudFormation for infrastructure automation of AI workloads</li>
                         </ul>
                     </div>
                     
                     <div class="timeline-item">
                         <p class="timeline-date">January 2023 - March 2023</p>
-                        <h4 class="timeline-title">Python Full Stack Web Developer Intern</h4>
+                        <h4 class="timeline-title">Python Full Stack Developer Intern</h4>
                         <p class="timeline-company">Elite Software, Pune</p>
                         <ul class="timeline-desc">
-                            <li>Developed and maintained Python-based web applications</li>
-                            <li>Contributed to both front-end and back-end development using HTML, CSS, JavaScript, and Python</li>
-                            <li>Ensured smooth integration between client-side and server-side logic</li>
-                        </ul>
-                    </div>
-                </div>
-            </div>
-            
-            <div id="projects" class="tab-content">
-                <div class="timeline">
-                    <div class="timeline-item">
-                        <p class="timeline-date">2023 - Present</p>
-                        <h4 class="timeline-title">Brain Tumor Detection Using Image Processing</h4>
-                        <p class="timeline-company">Final Year Project</p>
-                        <ul class="timeline-desc">
-                            <li>Developed a system for detecting brain tumors from medical images using image processing techniques</li>
-                            <li>Built a user-friendly web interface using HTML, CSS, and JavaScript</li>
-                            <li>Implemented image preprocessing techniques for quality improvement and segmentation</li>
+                            <li>Developed Python web applications using Django and Flask frameworks</li>
+                            <li>Built REST APIs and integrated with frontend using JavaScript</li>
+                            <li>Worked with MySQL and PostgreSQL databases</li>
+                            <li>Implemented user authentication and authorization systems</li>
                         </ul>
                     </div>
                     
                     <div class="timeline-item">
-                        <p class="timeline-date">2023</p>
-                        <h4 class="timeline-title">Student ERP System</h4>
-                        <p class="timeline-company">Academic Project</p>
+                        <p class="timeline-date">2024</p>
+                        <h4 class="timeline-title">Python Full Stack Developer Intern</h4>
+                        <p class="timeline-company">Kiran Academy, Warje</p>
                         <ul class="timeline-desc">
-                            <li>Developed a comprehensive ERP Student Management System</li>
-                            <li>Created a robust solution for managing academic and administrative tasks in educational institutions</li>
-                            <li>Used PHP, HTML, CSS, JavaScript, SQL, and JSON for implementation</li>
+                            <li>Developed full-stack web applications using Python and modern frameworks</li>
+                            <li>Built responsive frontend interfaces with HTML, CSS, and JavaScript</li>
+                            <li>Implemented database designs and optimized queries</li>
+                            <li>Collaborated on team projects using Git version control</li>
                         </ul>
                     </div>
                 </div>
             </div>
             
-            <div id="devops-exp" class="tab-content">
+            <div id="aws-projects" class="tab-content">
                 <div class="timeline">
                     <div class="timeline-item">
-                        <p class="timeline-date">2024 - Present</p>
-                        <h4 class="timeline-title">DevOps Infrastructure Projects</h4>
-                        <p class="timeline-company">Personal & AWS re/Start Projects</p>
+                        <p class="timeline-date">2024 - 2025</p>
+                        <h4 class="timeline-title">AWS re/Start Program Projects</h4>
+                        <p class="timeline-company">AWS Training & Certification</p>
                         <ul class="timeline-desc">
-                            <li>Built CI/CD pipelines using GitHub Actions and Jenkins</li>
-                            <li>Deployed containerized applications using Docker and Kubernetes</li>
-                            <li>Implemented Infrastructure as Code using Terraform</li>
-                            <li>Set up monitoring and alerting with CloudWatch, Prometheus, and Grafana</li>
-                            <li>Configured auto-scaling and load balancing on AWS</li>
+                            <li>Deployed multi-tier web application on AWS using EC2, RDS, and ELB</li>
+                            <li>Built serverless application with Lambda, API Gateway, and DynamoDB</li>
+                            <li>Implemented auto-scaling and load balancing for high availability</li>
+                            <li>Used CloudFormation for infrastructure as code deployment</li>
+                            <li>Configured monitoring and alerting with CloudWatch</li>
+                        </ul>
+                    </div>
+                    
+                    <div class="timeline-item">
+                        <p class="timeline-date">2024</p>
+                        <h4 class="timeline-title">Infosys Springboard AWS Projects</h4>
+                        <p class="timeline-company">Infosys Springboard</p>
+                        <ul class="timeline-desc">
+                            <li>Deployed AI models on AWS SageMaker with automated CI/CD pipeline</li>
+                            <li>Built serverless AI application using Lambda and Step Functions</li>
+                            <li>Used S3 for data storage and CloudFront for content delivery</li>
+                            <li>Implemented security best practices with IAM roles and policies</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            
+            <div id="python-dev" class="tab-content">
+                <div class="timeline">
+                    <div class="timeline-item">
+                        <p class="timeline-date">January 2023 - March 2023</p>
+                        <h4 class="timeline-title">Python Full Stack Developer Intern</h4>
+                        <p class="timeline-company">Elite Software, Pune</p>
+                        <ul class="timeline-desc">
+                            <li>Developed Python web applications using Django and Flask frameworks</li>
+                            <li>Built REST APIs and integrated with frontend using JavaScript</li>
+                            <li>Worked with MySQL and PostgreSQL databases</li>
+                            <li>Implemented user authentication and authorization systems</li>
+                        </ul>
+                    </div>
+                    
+                    <div class="timeline-item">
+                        <p class="timeline-date">2024</p>
+                        <h4 class="timeline-title">Python Full Stack Developer Intern</h4>
+                        <p class="timeline-company">Kiran Academy, Warje</p>
+                        <ul class="timeline-desc">
+                            <li>Developed full-stack web applications using Python and modern frameworks</li>
+                            <li>Built responsive frontend interfaces with HTML, CSS, and JavaScript</li>
+                            <li>Implemented database designs and optimized queries</li>
+                            <li>Collaborated on team projects using Git version control</li>
+                        </ul>
+                    </div>
+                    
+                    <div class="timeline-item">
+                        <p class="timeline-date">2023 - Present</p>
+                        <h4 class="timeline-title">Python Automation & DevOps Scripts</h4>
+                        <p class="timeline-company">Personal Projects</p>
+                        <ul class="timeline-desc">
+                            <li>Developed Python scripts for AWS infrastructure automation</li>
+                            <li>Built CLI tools for DevOps task automation</li>
+                            <li>Created API clients for AWS services using Boto3</li>
+                            <li>Developed automation scripts for deployment and monitoring</li>
                         </ul>
                     </div>
                 </div>
@@ -2205,11 +2568,11 @@
                         <h3 class="project-title">Contact App on AWS (Full Stack)</h3>
                         <p class="project-desc">Built cloud-ready contact management application with Node.js, MySQL, Docker, and deployed on AWS EC2 with load balancing and auto scaling for high-traffic workloads.</p>
                         <div class="project-tech">
-                            <span class="project-tech-item">Node.js</span>
-                            <span class="project-tech-item">MySQL</span>
-                            <span class="project-tech-item">Docker</span>
                             <span class="project-tech-item">AWS EC2</span>
                             <span class="project-tech-item">Load Balancing</span>
+                            <span class="project-tech-item">Docker</span>
+                            <span class="project-tech-item">MySQL</span>
+                            <span class="project-tech-item">Auto Scaling</span>
                         </div>
                         <div class="project-links">
                             <a href="#" class="project-link">View Project</a>
@@ -2228,7 +2591,7 @@
                             <span class="project-tech-item">CloudFront</span>
                             <span class="project-tech-item">Route 53</span>
                             <span class="project-tech-item">CI/CD</span>
-                            <span class="project-tech-item">HTML/CSS/JS</span>
+                            <span class="project-tech-item">GitHub Actions</span>
                         </div>
                         <div class="project-links">
                             <a href="#" class="project-link">View Project</a>
@@ -2244,9 +2607,9 @@
                         <p class="project-desc">A system for detecting brain tumors from medical images using image processing techniques with a user-friendly web interface for medical professionals.</p>
                         <div class="project-tech">
                             <span class="project-tech-item">Python</span>
-                            <span class="project-tech-item">HTML</span>
-                            <span class="project-tech-item">CSS</span>
-                            <span class="project-tech-item">JavaScript</span>
+                            <span class="project-tech-item">OpenCV</span>
+                            <span class="project-tech-item">Flask</span>
+                            <span class="project-tech-item">HTML/CSS/JS</span>
                             <span class="project-tech-item">SQL</span>
                         </div>
                         <div class="project-links">
@@ -2262,10 +2625,11 @@
                         <h3 class="project-title">Legal Document Summarization</h3>
                         <p class="project-desc">AI-powered legal document summarization tool using HuggingFace models and Groq API with Streamlit interface for easy document processing.</p>
                         <div class="project-tech">
-                            <span class="project-tech-item">HuggingFace</span>
                             <span class="project-tech-item">Python</span>
-                            <span class="project-tech-item">Groq Api</span>
                             <span class="project-tech-item">Streamlit</span>
+                            <span class="project-tech-item">HuggingFace</span>
+                            <span class="project-tech-item">Groq API</span>
+                            <span class="project-tech-item">AWS Lambda</span>
                         </div>
                         <div class="project-links">
                             <a href="https://huggingface.co/spaces/sohampawar1030/legal_document_summarization_final" class="project-link">View Project</a>
@@ -2284,48 +2648,12 @@
                             <span class="project-tech-item">Docker</span>
                             <span class="project-tech-item">GitHub Actions</span>
                             <span class="project-tech-item">Terraform</span>
-                            <span class="project-tech-item">Helm</span>
+                            <span class="project-tech-item">AWS EKS</span>
                         </div>
                         <div class="project-links">
                             <a href="#" class="project-link">View Project</a>
                             <a href="#" class="project-link" target="_blank">GitHub</a>
                         </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Education Section -->
-    <section id="education" class="section education">
-        <div class="container">
-            <h2 class="section-title">My <span>Education</span></h2>
-            <div class="education-timeline">
-                <div class="education-item">
-                    <p class="education-date">2021 - 2025</p>
-                    <h4 class="education-degree">Bachelor in Engineering in Artificial Intelligence and Machine Learning</h4>
-                    <p class="education-school">Alard College of Engineering and Management, Pune</p>
-                    <p class="education-desc">CGPA: 9.40</p>
-                    <div class="project-links">
-                        <a href="https://drive.google.com/file/d/18tO9GDQmjKJZKRvjRbYJcSSQXcjmBF_-/view?usp=sharing" class="project-link">View Result</a>
-                    </div>
-                </div>
-                <div class="education-item">
-                    <p class="education-date">2020- 2021</p>
-                    <h4 class="education-degree">HSC</h4>
-                    <p class="education-school">Adarsh Gurukul Academy Peth Vadgaon, Kolhapur</p>
-                    <p class="education-desc">Percentage: 86.17</p>
-                    <div class="project-links">
-                        <a href="https://drive.google.com/file/d/1DJxdF95jlW4KTzXN_Zi-bWwS1HEj0j5N/view?usp=sharing" class="project-link">View Result</a>
-                    </div>
-                </div>
-                <div class="education-item">
-                    <p class="education-date">2018-2019</p>
-                    <h4 class="education-degree">SSC</h4>
-                    <p class="education-school">New English School Pandharwasti</p>
-                    <p class="education-desc">Percentage: 64.80</p>
-                    <div class="project-links">
-                        <a href="https://drive.google.com/file/d/1WuW2IzCBBwe0R_UUK6LT2sU3k0SzWeqJ/view?usp=sharing" class="project-link">View Result</a>
                     </div>
                 </div>
             </div>
@@ -2338,11 +2666,20 @@
             <h2 class="section-title">My <span>Certifications</span></h2>
             <div class="certifications-grid">
                 <div class="certification-card">
-                    <h3 class="certification-title">Kiran Academy AI Python Full Stack</h3>
-                    <p class="certification-issuer">Kiran Academy</p>
+                    <h3 class="certification-title">AWS re/Start Graduate</h3>
+                    <p class="certification-issuer">AWS Training & Certification</p>
                     <p class="certification-date">2025</p>
                     <div class="project-links">
-                        <a href="https://drive.google.com/file/d/1q6kVqn7A66sLX1wgqjOIu7VGFNgoqXGO/view?usp=drive_link" class="project-link">View Certificate</a>
+                        <a href="#" class="project-link">View Certificate</a>
+                    </div>
+                </div>
+                
+                <div class="certification-card">
+                    <h3 class="certification-title">AWS Cloud Practitioner (In Progress)</h3>
+                    <p class="certification-issuer">AWS</p>
+                    <p class="certification-date">2025</p>
+                    <div class="project-links">
+                        <a href="#aws-restart" class="project-link">Learn More</a>
                     </div>
                 </div>
                 
@@ -2356,6 +2693,15 @@
                 </div>
                 
                 <div class="certification-card">
+                    <h3 class="certification-title">Kiran Academy AI Python Full Stack</h3>
+                    <p class="certification-issuer">Kiran Academy</p>
+                    <p class="certification-date">2025</p>
+                    <div class="project-links">
+                        <a href="https://drive.google.com/file/d/1q6kVqn7A66sLX1wgqjOIu7VGFNgoqXGO/view?usp=drive_link" class="project-link">View Certificate</a>
+                    </div>
+                </div>
+                
+                <div class="certification-card">
                     <h3 class="certification-title">Java Professional Course</h3>
                     <p class="certification-issuer">VJ Tech Academy</p>
                     <p class="certification-date">2024</p>
@@ -2365,36 +2711,11 @@
                 </div>
                 
                 <div class="certification-card">
-                    <h3 class="certification-title">IBM Data Analytics</h3>
-                    <p class="certification-issuer">Coursera</p>
-                    <p class="certification-date">2023</p>
-                    <div class="project-links">
-                        <a href="https://coursera.org/share/b28f7da5da1bbb4bc18549a964e8811f" class="project-link">View Certificate</a>
-                    </div>
-                </div>
-                
-                <div class="certification-card">
-                    <h3 class="certification-title">Google Data Analytics</h3>
-                    <p class="certification-issuer">Google</p>
-                    <p class="certification-date">2022</p>
-                    <div class="project-links">
-                        <a href="https://coursera.org/share/9466f40087b1a304dd3342bad30d7108" class="project-link">View Certificate</a>
-                    </div>
-                </div>
-                <div class="certification-card">
                     <h3 class="certification-title">Power BI for Business Professionals</h3>
                     <p class="certification-issuer">Infosys Springboard</p>
                     <p class="certification-date">2024</p>
                     <div class="project-links">
                         <a href="https://infyspringboard.onwingspan.com/public-assets/infosysheadstart/cert/lex_auth_01329487630381056036366_shared/1-8bedbbd1-b246-40be-8e68-b9239f2faf23.pdf" class="project-link">View Certificate</a>
-                    </div>
-                </div>
-                <div class="certification-card">
-                    <h3 class="certification-title">AWS Cloud Practitioner (In Progress)</h3>
-                    <p class="certification-issuer">AWS re/Start Program</p>
-                    <p class="certification-date">2025</p>
-                    <div class="project-links">
-                        <a href="#aws" class="project-link">Learn More</a>
                     </div>
                 </div>
             </div>
@@ -2408,7 +2729,7 @@
             <div class="contact-content">
                 <div class="contact-info">
                     <h3 class="contact-title">Get In Touch</h3>
-                    <p class="contact-desc">Feel free to contact me for any job opportunities, projects, or collaborations. I'm always open to discussing new ideas and opportunities.</p>
+                    <p class="contact-desc">I'm actively looking for entry-level opportunities in DevOps, AWS Cloud, and Python development roles. Feel free to contact me for job opportunities, projects, or collaborations.</p>
                     
                     <div class="contact-item">
                         <div class="contact-icon">📱</div>
@@ -2431,6 +2752,14 @@
                         <div class="contact-text">
                             <h4 class="contact-label">Location</h4>
                             <p class="contact-value">Pune, Maharashtra, India</p>
+                        </div>
+                    </div>
+                    
+                    <div class="contact-item">
+                        <div class="contact-icon">🎯</div>
+                        <div class="contact-text">
+                            <h4 class="contact-label">Job Roles</h4>
+                            <p class="contact-value">DevOps Engineer | AWS Cloud Engineer | Python Developer</p>
                         </div>
                     </div>
                 </div>
@@ -2470,7 +2799,7 @@
             <div class="footer-content">
                 <div>
                     <h3 class="footer-logo">Soham<span>Pawar</span></h3>
-                    <p class="footer-desc">AI & Machine Learning Engineer with a passion for building intelligent systems and user-friendly applications. Currently enhancing cloud computing and DevOps skills through AWS re/Start program.</p>
+                    <p class="footer-desc">AWS re/Start Graduate with hands-on experience in cloud infrastructure, DevOps practices, and Python development. Seeking entry-level opportunities in DevOps, AWS Cloud, and Python development roles.</p>
                     <div class="footer-socials">
                         <a href="https://wa.me/917030806080" class="social-link" target="_blank" aria-label="WhatsApp">
                             <i class="fab fa-whatsapp"></i>
@@ -2488,15 +2817,13 @@
                 </div>
                 
                 <div>
-                    <h3 class="footer-title">Quick Links</h3>
+                    <h3 class="footer-title">Target Roles</h3>
                     <ul class="footer-links">
-                        <li><a href="#home" class="footer-link">↗️ Home</a></li>
-                        <li><a href="#about" class="footer-link">↗️ About</a></li>
-                        <li><a href="#skills" class="footer-link">↗️ Skills</a></li>
-                        <li><a href="#devops" class="footer-link">↗️ DevOps</a></li>
-                        <li><a href="#aws" class="footer-link">↗️ AWS</a></li>
-                        <li><a href="#experience" class="footer-link">↗️ Experience</a></li>
-                        <li><a href="#projects" class="footer-link">↗️ Projects</a></li>
+                        <li><a href="#devops" class="footer-link">↗️ DevOps Engineer</a></li>
+                        <li><a href="#aws-restart" class="footer-link">↗️ AWS Cloud Engineer</a></li>
+                        <li><a href="#python" class="footer-link">↗️ Python Developer</a></li>
+                        <li><a href="#skills" class="footer-link">↗️ Cloud Support Engineer</a></li>
+                        <li><a href="#projects" class="footer-link">↗️ Site Reliability Engineer</a></li>
                     </ul>
                 </div>
                 
@@ -2514,11 +2841,15 @@
                         <div class="footer-contact-icon">📍</div>
                         <p class="footer-contact-text">Pune, Maharashtra, India</p>
                     </div>
+                    <div class="footer-contact-item">
+                        <div class="footer-contact-icon">🎓</div>
+                        <p class="footer-contact-text">AWS re/Start Graduate</p>
+                    </div>
                 </div>
             </div>
             
             <div class="footer-bottom">
-                <p>&copy; 2025 Soham Pawar. All Rights Reserved.</p>
+                <p>&copy; 2025 Soham Pawar. AWS re/Start Graduate | DevOps Specialist | Python Developer. All Rights Reserved.</p>
             </div>
         </div>
     </footer>
@@ -2630,7 +2961,7 @@
         }, observerOptions);
 
         // Observe elements for animation
-        document.querySelectorAll('.skill-item, .project-card, .certification-card, .devops-card, .timeline-item, .education-item').forEach(el => {
+        document.querySelectorAll('.skill-item, .project-card, .certification-card, .devops-card, .aws-service-card, .timeline-item').forEach(el => {
             observer.observe(el);
         });
 
@@ -2685,37 +3016,11 @@
             });
         });
 
-        // Theme toggle (optional future feature)
-        const themeToggle = document.createElement('div');
-        themeToggle.className = 'theme-toggle';
-        themeToggle.innerHTML = '<i class="fas fa-moon"></i>';
-        themeToggle.style.position = 'fixed';
-        themeToggle.style.bottom = '20px';
-        themeToggle.style.right = '20px';
-        themeToggle.style.width = '50px';
-        themeToggle.style.height = '50px';
-        themeToggle.style.backgroundColor = 'var(--primary)';
-        themeToggle.style.borderRadius = '50%';
-        themeToggle.style.display = 'flex';
-        themeToggle.style.alignItems = 'center';
-        themeToggle.style.justifyContent = 'center';
-        themeToggle.style.color = 'white';
-        themeToggle.style.cursor = 'pointer';
-        themeToggle.style.zIndex = '1000';
-        themeToggle.style.boxShadow = '0 4px 8px rgba(0,0,0,0.2)';
-        
-        // Uncomment to add theme toggle
-        // document.body.appendChild(themeToggle);
-        
-        themeToggle.addEventListener('click', () => {
-            document.body.classList.toggle('dark-mode');
-            const icon = themeToggle.querySelector('i');
-            if (document.body.classList.contains('dark-mode')) {
-                icon.className = 'fas fa-sun';
-                themeToggle.style.backgroundColor = '#FF9900';
-            } else {
-                icon.className = 'fas fa-moon';
-                themeToggle.style.backgroundColor = 'var(--primary)';
+        // Close mobile menu when clicking outside
+        document.addEventListener('click', (e) => {
+            if (!hamburger.contains(e.target) && !navLinks.contains(e.target)) {
+                navLinks.classList.remove('active');
+                hamburger.classList.remove('active');
             }
         });
     </script>
